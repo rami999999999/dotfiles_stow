@@ -1,0 +1,47 @@
+#! /bin/sh
+
+sxhkd &
+tmux new-session -d -s float 
+xrdb -merge ~/.Xresources
+
+feh --bg-fill /usr/share/backgrounds/manjaro-wallpapers-18.0/manjaro-cat.jpg
+#compton  --backend glx  --sw-opti  --glx-swap-method 1 --glx-no-stencil --paint-on-overlay --xrender-sync-fence  -D 0 &
+compton  --backend xrender  --sw-opti  --paint-on-overlay --xrender-sync-fence  -D 0 &
+
+#bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d web term chat code 5 6 7 8 9 10
+
+bspc config border_width         2
+bspc config window_gap          12
+
+#yellow (color3) at border
+bspc config focused_border_color $(xrdb -query | grep color3 | awk '{print $2}')
+
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Rofi state=floating
+bspc rule -a feh state=floating
+
+#bspc config click_to_focus button1
+#bspc config pointer_modifier mod4
+#bspc config pointer_action1 move
+#bspc config pointar_action2 resize_corner
+#bspc config pointar_action3 resize_side
+
+bspc config automatic_scheme logest_side
+#bspc rule -a \* node=focused split_dir=east
+
+
+bspc rule -a URxvt:scratchy sticky=on state=floating rectangle=widthxheight+Xoffset+Yoffset
+
+#polybar -r -c ~/.config/polybar/config.trans.nord bspwm &
+polybar -r -c ~/.config/polybar/config.v2 top &
+

@@ -1,0 +1,64 @@
+*fading:                15
+*fadeColor:             black
+*pointerColorBackground:#2B2C2B
+*pointerColorForeground:#16A085
+
+Xcursor.theme: Breeze
+Xcursor.size:  0
+
+
+! URxvt SETUP HERE !
+!URxvt.font: xft:Monofur\ Nerd\ Font:size=13
+!URxvt.font: xft:InconsolataGo\ Nerd\ Font:size=15
+!URxvt.font: xft:MesloLGMDZ\ Nerd\ Font:size=13
+!URxvt.font: xft:FuraCode Nerd\ Font:size=13
+!URxvt.font: xft:Inconsolata:size=13
+!URxvt.font: xft:Fira\ Mono:style=Medium:size=12
+!URxvt.font: xft:Hack:style=Medium:size=12
+URxvt.font: xft:Iosevka Term:style=Regular:size=14
+
+st.font: xft:Iosevka Term:style=Regular:size=14
+
+
+URxvt.geometry: 80x20
+URxvt.depth: 32
+URxvt*scrollBar:                      false
+URxvt*mouseWheelScrollPage:           false
+URxvt*cursorBlink:                    true
+URxvt*saveLines:                      5000
+URxvt*borderless: true
+URxvt*internalBorder: 3
+URxvt*externalBorder: 0
+URxvt.transparent: false
+! ROFI SETUP HERE !
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+!                  bg       border   separator
+rofi.color-window: #1f1f1f, #c6c6c6, #c6c6c6
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #1f1f1f, #828282, #1f1f1f, #1f1f1f, #c6c6c6
+rofi.color-active: #1f1f1f, #828282, #1f1f1f, #1f1f1f, #c6c6c6
+rofi.color-urgent: #1f1f1f, #828282, #1f1f1f, #1f1f1f, #c6c6c6
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 5
+!rofi.font: monofur 13
+rofi.font: Inconsolata 13
+rofi.bw: 1
+rofi.columns: 2
+rofi.padding: 5
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
+
+#############
+! Enables copy/paste with Ctrl-Shift-C/V
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+
+
