@@ -17,7 +17,6 @@ if dein#load_state('/home/pedramos/.config/nvim/dein')
   "deoplete for auto-completion
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('mdempsky/gocode', {'rtp': 'nvim/'})
-  
   "Ale for Linting
   call dein#add('w0rp/ale')
   
@@ -73,7 +72,7 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
+set rtp+=/usr/local/opt/fzf
 
 
 set number
@@ -227,8 +226,11 @@ let g:ale_perl_perlcritic_showrules = 1
 function! s:goyo_enter()
   let b:quitting = 0
   let b:quitting_bang = 0
+  set filetype=markdown
   autocmd QuitPre <buffer> let b:quitting = 1
   cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+  "Limelight
+  
 endfunction
 
 function! s:goyo_leave()
@@ -240,7 +242,29 @@ function! s:goyo_leave()
       qa
     endif
   endif
+"Limelight!
 endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
+
+let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
+let g:pandoc#filetypes#pandoc_markdown = 0
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+map <C-N> :FZF<CR>
