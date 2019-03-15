@@ -268,3 +268,5 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
 map <C-N> :FZF<CR>
+
+map <F2> :ls<CR>:b<Space>
