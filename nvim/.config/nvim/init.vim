@@ -1,77 +1,65 @@
-"dein Scripts-----------------------------
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
-set runtimepath+=/home/pedramos/.config/nvim/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state('/home/pedramos/.config/nvim/dein')
-  call dein#begin('/home/pedramos/.config/nvim/dein')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('/home/pedramos/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
-  
+call plug#begin('~/.local/share/nvim/plugged')
   "deoplete for auto-completion
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('mdempsky/gocode', {'rtp': 'nvim/'})
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'mdempsky/gocode', {'rtp': 'nvim/'}
   "Ale for Linting
-  call dein#add('w0rp/ale')
+  Plug 'w0rp/ale'
   
-  call dein#add('tbastos/vim-lua')
-  call dein#add('neovim/nvimdev.nvim')
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
+  Plug 'tbastos/vim-lua'
+  Plug 'neovim/nvimdev.nvim'
+  Plug 'Shougo/neosnippet.vim'
+  Plug 'Shougo/neosnippet-snippets'
     
-  call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+  Plug 'Shougo/deol.nvim', { 'rev': 'a1b5108fd' }
   
   ""theming
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
-    call dein#add('scrooloose/nerdtree')
-    call dein#add('altercation/vim-colors-solarized')
-    call dein#add('morhetz/gruvbox') 
-    call dein#add('majutsushi/tagbar')
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'scrooloose/nerdtree'
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'morhetz/gruvbox' 
+    Plug 'majutsushi/tagbar'
 
-    call dein#add('lepture/vim-jinja')
-    call dein#add('rust-lang/rust.vim')
-    call dein#add('fatih/vim-go')
-    call dein#add('vim-perl/vim-perl')
+    Plug 'lepture/vim-jinja'
+    Plug 'rust-lang/rust.vim'
+    Plug 'fatih/vim-go'
+    Plug 'vim-perl/vim-perl'
 
     "utils
-    call dein#add('pbrisbin/vim-mkdir')
-    call dein#add('junegunn/goyo.vim')
-    call dein#add('junegunn/limelight.vim')
-    call dein#add('vim-pandoc/vim-pandoc')
-    call dein#add('vim-pandoc/vim-pandoc-syntax')
-    call dein#add('godlygeek/tabular')
-    "call dein#add('plasticboy/vim-markdown')
+    Plug 'pbrisbin/vim-mkdir'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'godlygeek/tabular'
+    "Plug 'plasticboy/vim-markdown'
     
-    call dein#add('arcticicestudio/nord-vim',{'branch':'develop'})
-    call dein#add('lervag/vimtex')
-    call dein#add('zchee/deoplete-go')
-    call dein#add('zchee/deoplete-jedi')
-    call dein#add('davidhalter/jedi-vim')
-    call dein#add('sebastianmarkow/deoplete-rust')
-    call dein#add('fszymanski/deoplete-emoji')
-    call dein#add('Shougo/deoplete-clangx')
-    " Required:
-  call dein#end()
-  call dein#save_state()
-endif
+    Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
+    Plug 'lervag/vimtex'
+    Plug 'zchee/deoplete-go'
+    Plug 'zchee/deoplete-jedi'
+    Plug 'davidhalter/jedi-vim'
+    Plug 'sebastianmarkow/deoplete-rust'
+    Plug 'fszymanski/deoplete-emoji'
+    Plug 'Shougo/deoplete-clangx'
 
-" Required:
-filetype plugin indent on
-syntax enable
 
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+call plug#end()
 
-"End dein Scripts-------------------------
+
+
 set rtp+=/usr/local/opt/fzf
 
 
