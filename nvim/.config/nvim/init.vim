@@ -55,6 +55,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'fszymanski/deoplete-emoji'
     Plug 'Shougo/deoplete-clangx'
 
+    Plug 'Shougo/neosnippet.vim'
+    Plug 'Shougo/neosnippet-snippets'
 
 call plug#end()
 
@@ -62,6 +64,9 @@ call plug#end()
 
 set rtp+=/usr/local/opt/fzf
 
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 set number
 set breakindent
@@ -69,6 +74,14 @@ set breakindentopt=shift:1
 set showbreak=↪\
 set linebreak
 set colorcolumn=90
+
+" Latex styff
+" ============
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 
 " Python stuff
@@ -217,7 +230,7 @@ function! s:goyo_enter()
   set filetype=markdown
   autocmd QuitPre <buffer> let b:quitting = 1
   cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
-  "Limelight
+  Limelight
   
 endfunction
 
@@ -230,7 +243,7 @@ function! s:goyo_leave()
       qa
     endif
   endif
-"Limelight!
+Limelight!
 endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
