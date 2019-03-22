@@ -44,8 +44,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-pandoc/vim-pandoc'
     Plug 'vim-pandoc/vim-pandoc-syntax'
     Plug 'godlygeek/tabular'
-    "Plug 'plasticboy/vim-markdown'
-    
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
     Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
     Plug 'lervag/vimtex'
     Plug 'zchee/deoplete-go'
@@ -54,7 +53,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'sebastianmarkow/deoplete-rust'
     Plug 'fszymanski/deoplete-emoji'
     Plug 'Shougo/deoplete-clangx'
-
+    Plug 'deathlyfrantic/deoplete-spell'
     Plug 'Shougo/neosnippet.vim'
     Plug 'Shougo/neosnippet-snippets'
 
@@ -74,6 +73,8 @@ set breakindentopt=shift:1
 set showbreak=↪\
 set linebreak
 set colorcolumn=90
+set mouse=a
+
 
 " Latex styff
 " ============
@@ -97,11 +98,11 @@ au BufNewFile,BufRead *.py
 
     "let python_highlight_all=1
     "let python_space_error_highlight = 0
-    let python_no_builtin_highlight = 1
-    let python_no_doctest_code_highlight = 1
-    let python_no_doctest_highlight = 1
-    let python_no_exception_highlight = 1
-    let python_no_number_highlight = 1
+    "let python_no_builtin_highlight = 1
+    "let python_no_doctest_code_highlight = 1
+    "let python_no_doctest_highlight = 1
+    "let python_no_exception_highlight = 1
+    "let python_no_number_highlight = 1
 
 
 " C stuff
@@ -118,16 +119,8 @@ au BufNewFile,BufRead *.c
 " Markdown stuff
 " =================
 au BufNewFile,BufRead *.md
-    \ :Goyo |
-    \ set filetype=markdown  
-    "\ :!/home/pedramos/.config/nvim/bin/preview.sh % & 
-
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave Limelight!
-    let g:vim_markdown_auto_extension_ext = 'md'
-    let g:vim_markdown_folding_disabled=1
-    set nofoldenable
-
+    \ set nofoldenable | 
+    let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"]
 
 "python template
 if has("autocmd")
@@ -165,7 +158,6 @@ colorscheme nord
 
 set guicursor=
 set cursorline
-set lazyredraw
 
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -176,12 +168,11 @@ let mapleader=","       " leader is comma
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
-""airline config
-
+"airline config
+"=================
 "let g:airline_theme='solarized'
 let g:airline_theme='nord'
 "let g:airline_theme='zenburn'
-
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
@@ -195,6 +186,7 @@ set noshowmode
 
 
 "nerdtree
+"============
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -204,10 +196,15 @@ let g:go_version_warning = 0
 nmap <F8> :TagbarToggle<CR>
 
 
-" buffers
+" buffers management
+" ====================
 nnoremap <tab> :bn<CR>
 nnoremap <s-tab> :bp<CR>
 nnoremap <leader>bd :bd<CR>
+
+" Other config
+" =============
+
 let deoplete#enable_at_startup=1
 
 let g:tagbar_ctags_bin = '/usr/bin/uctags'
@@ -227,7 +224,6 @@ let g:ale_perl_perlcritic_showrules = 1
 function! s:goyo_enter()
   let b:quitting = 0
   let b:quitting_bang = 0
-  set filetype=markdown
   autocmd QuitPre <buffer> let b:quitting = 1
   cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
   Limelight
@@ -249,8 +245,8 @@ endfunction
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
 
-let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
-let g:pandoc#filetypes#pandoc_markdown = 0
+" buffers
+"============
 function! s:buflist()
   redir => ls
   silent ls
@@ -261,6 +257,9 @@ endfunction
 function! s:bufopen(e)
   execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
+
+" FZF
+" =============
 
 nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'source':  reverse(<sid>buflist()),
