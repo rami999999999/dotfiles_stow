@@ -5,6 +5,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 
+let g:ale_completion_enabled=1
 
 if &compatible
   set nocompatible               " Be iMproved
@@ -56,10 +57,47 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'deathlyfrantic/deoplete-spell'
     Plug 'Shougo/neosnippet.vim'
     Plug 'Shougo/neosnippet-snippets'
-
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ } 
 call plug#end()
 
 
+
+let g:LanguageClient_autoStart = 1
+
+
+let g:ale_enabled = 1
+let g:ale_sign_error = '✖︎'
+highlight ALEErrorSign guifg=red ctermfg=red
+let g:ale_sign_warning = '✔︎'
+highlight ALEWarningSign guifg=grey ctermfg=grey
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:move_key_modifier = 'N'
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
+let g:ale_type_map = {
+\ 'perlcritic': {'ES': 'WS', 'E': 'W'},
+\}
+
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang/'
+let g:clang_user_options = '-std=c++14'
+let g:clang_complete_auto = 1
+
+
+" let g:ale_sign_column_always = 1                " ale enabled
+"let g:ale_sign_column_always = 1
+"let g:ale_completion_enabled=1
+"let g:ale_fix_on_save = 1
+""let g:ale_linters = {'c':'all','perl':'perltidy'}
+"let g:ale_fixers = {'perl':'perltidy','c':'clang-format'}
+"let g:airline#extensions#ale#enabled = 1
 
 set rtp+=/usr/local/opt/fzf
 
