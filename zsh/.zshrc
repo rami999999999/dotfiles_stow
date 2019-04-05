@@ -70,14 +70,14 @@ export SAVEHIST=500000
 # Cursor
 #echo -e -n "\x1b[\x30 q" # changes to blinking block
 #echo -e -n "\x1b[\x31 q" # changes to blinking block also
-#echo -e -n "\x1b[\x32 q" # changes to steady block
+echo -e -n "\x1b[\x32 q" # changes to steady block
 #echo -e -n "\x1b[\x33 q" # changes to blinking underline
-echo -e -n "\x1b[\x34 q" # changes to steady underline
+#echo -e -n "\x1b[\x34 q" # changes to steady underline
 #echo -e -n "\x1b[\x35 q" # changes to blinking bar
 #echo -e -n "\x1b[\x36 q" # changes to steady bar
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -180,7 +180,7 @@ alias hc='herbstclient'
 alias ff='firefox'
 # Force tmux to use 256 colors
 # Either set this or TERM=xterm (or both if tmux keeps messing up?)
-#alias tmux="tmux -2"
+alias tmux="tmux -2"
 # clock
 #alias c="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &; clear"
 
@@ -212,17 +212,17 @@ alias theme.lua="nvim ~/.config/awesome/themes/reasons/theme.lua"
 #alias awesomeconf="vim ~/.config/awesome/rc.lua"
 #alias subl="subl3"
 # Update qutebrowser
-alias quteup="(cd ~/pro/qutebrowser; git pull origin && tox -r -e mkvenv-pypi-old)"
+#alias quteup="(cd ~/pro/qutebrowser; git pull origin && tox -r -e mkvenv-pypi-old)"
 
 # nvidia optimus -> prime select 
-alias nvidia="sudo prime-select nvidia"
-alias intel="sudo prime-select intel"
+#alias nvidia="sudo prime-select nvidia"
+#alias intel="sudo prime-select intel"
 # cpu governor
-alias gameoff="sudo cpufreq-set -g powersave"
-alias gameon="sudo cpufreq-set -g performance"
+#alias gameoff="sudo cpufreq-set -g powersave"
+#alias gameon="sudo cpufreq-set -g performance"
 
 # translate-shell: brief
-alias t='trans -brief'
+#alias t='trans -brief'
 
 # --- even-better-ls ---  
 #LS_COLORS=$(ls_colors_generator)
@@ -254,3 +254,5 @@ bindkey "^[[1;5C" forward-word
 # lxterminal doesnt detect diff between backspace and ctrl + backspace
 #bindkey "^?" backward-kill-word
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
