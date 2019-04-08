@@ -310,6 +310,6 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
-map <C-N> :FZF<CR>
+nnoremap <silent> <Leader>n :FZF<CR>
 
 map <F2> :ls<CR>:b<Space>
