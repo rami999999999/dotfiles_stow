@@ -42,10 +42,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'majutsushi/tagbar'
 
     Plug 'lepture/vim-jinja'
-    Plug 'rust-lang/rust.vim'
-    Plug 'fatih/vim-go'
-    Plug 'vim-perl/vim-perl'
-
+    "Plug 'rust-lang/rust.vim'
+    "Plug 'fatih/vim-go'
+    "Plug 'vim-perl/vim-perl'
+    Plug 'neomake/neomake'
     "utils
     Plug 'pbrisbin/vim-mkdir'
     Plug 'junegunn/goyo.vim'
@@ -85,9 +85,9 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:move_key_modifier = 'N'
-let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_enter = 1
-let g:ale_lint_on_save = 1
+"let g:ale_lint_on_insert_leave = 1
+"let g:ale_lint_on_enter = 1
+"let g:ale_lint_on_save = 1
 let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
 let g:ale_type_map = {
 \ 'perlcritic': {'ES': 'WS', 'E': 'W'},
@@ -95,7 +95,6 @@ let g:ale_type_map = {
 
 let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header='/usr/lib/clang/'
-let g:clang_user_options = '-std=c++14'
 let g:clang_complete_auto = 1
 
 
@@ -103,9 +102,9 @@ let g:clang_complete_auto = 1
 "let g:ale_sign_column_always = 1
 "let g:ale_completion_enabled=1
 "let g:ale_fix_on_save = 1
-""let g:ale_linters = {'c':'all','perl':'perltidy'}
-"let g:ale_fixers = {'perl':'perltidy','c':'clang-format'}
-"let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {'c':['clang'],'perl':['perltidy']}
+let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format']}
+let g:airline#extensions#ale#enabled = 1
 
 set rtp+=/usr/local/opt/fzf
 
@@ -257,10 +256,8 @@ let g:tagbar_ctags_bin = '/usr/bin/uctags'
 
 let g:jedi#completions_enabled = 0
 
-"let g:go_fmt_command='goimports'
 let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
 
-let g:ale_perl_perl_options = '-c -Mwarnings -Ilib -It/lib'
 let g:ale_perl_perlcritic_showrules = 1
 
 
