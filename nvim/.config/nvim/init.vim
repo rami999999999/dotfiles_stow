@@ -88,7 +88,7 @@ let g:move_key_modifier = 'N'
 "let g:ale_lint_on_insert_leave = 1
 "let g:ale_lint_on_enter = 1
 "let g:ale_lint_on_save = 1
-let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
+"let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
 let g:ale_type_map = {
 \ 'perlcritic': {'ES': 'WS', 'E': 'W'},
 \}
@@ -325,4 +325,4 @@ map <F2> :ls<CR>:b<Space>
 " gofmt
 " fzf
 " clang
-
+nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
