@@ -100,11 +100,15 @@ let g:clang_complete_auto = 1
 
 " let g:ale_sign_column_always = 1                " ale enabled
 "let g:ale_sign_column_always = 1
-"let g:ale_completion_enabled=1
-"let g:ale_fix_on_save = 1
-let g:ale_linters = {'c':['clang'],'perl':['perltidy']}
-let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format']}
+let g:ale_completion_enabled=1
+let g:ale_fix_on_save = 1
+let g:ale_linters = {'c':['clang'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt']}
+let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt']}
 let g:airline#extensions#ale#enabled = 1
+nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
+nmap <silent> <C-Down> <Plug>(ale_next_wrap)
+
+
 
 set rtp+=/usr/local/opt/fzf
 
@@ -313,3 +317,12 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 nnoremap <silent> <Leader>n :FZF<CR>
 
 map <F2> :ls<CR>:b<Space>
+
+
+
+"packages needed for vim
+" autopep8
+" gofmt
+" fzf
+" clang
+
