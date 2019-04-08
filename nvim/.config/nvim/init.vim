@@ -6,7 +6,7 @@ endif
 
 
 let g:ale_completion_enabled=1
-
+    
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -31,6 +31,14 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'altercation/vim-colors-solarized'
     Plug 'morhetz/gruvbox' 
+    Plug 'drewtempelmeyer/palenight.vim'
+    " Nice icons
+    Plug 'ryanoasis/vim-devicons'    
+    
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    " Identation guides for better visualization
+    Plug 'Yggdroot/indentLine'
+
     Plug 'majutsushi/tagbar'
 
     Plug 'lepture/vim-jinja'
