@@ -26,6 +26,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Shougo/deol.nvim', { 'rev': 'a1b5108fd' }
   
   ""theming
+    Plug 'rhysd/vim-color-spring-night'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
@@ -42,7 +43,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'majutsushi/tagbar'
 
     Plug 'lepture/vim-jinja'
-    "Plug 'rust-lang/rust.vim'
+    Plug 'rust-lang/rust.vim'
     "Plug 'fatih/vim-go'
     "Plug 'vim-perl/vim-perl'
     Plug 'neomake/neomake'
@@ -102,9 +103,12 @@ let g:clang_complete_auto = 1
 "let g:ale_sign_column_always = 1
 let g:ale_completion_enabled=1
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'c':['clang'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls']}
+let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls']}
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt']}
 let g:airline#extensions#ale#enabled = 1
+
+let g:ale_c_clangformat_options="-style Mozilla"
+
 nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
 nmap <silent> <C-Down> <Plug>(ale_next_wrap)
 
@@ -203,9 +207,14 @@ let g:nord_comment_brightness = 20
 let g:nord_uniform_diff_background = 1
 let g:nord_cursor_line_number_background = 1
 
-colorscheme nord
+let g:spring_night_high_contrast=0
+let g:spring_night_highlight_terminal=1
 
+"colorscheme nord
+colorscheme spring-night
+let g:airline_theme = 'spring_night'
 set guicursor=
+"let g:airline_theme='nord'
 set cursorline
 
 set incsearch           " search as characters are entered
@@ -220,7 +229,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 "airline config
 "=================
 "let g:airline_theme='solarized'
-let g:airline_theme='nord'
 "let g:airline_theme='zenburn'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
