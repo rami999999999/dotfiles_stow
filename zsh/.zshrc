@@ -50,8 +50,8 @@ ZSH_THEME="garyblessington"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+#Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM=$HOME/.zcustom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -195,7 +195,6 @@ alias init.vim="vim ~/.config/nvim/init.vim"
 
 # Quick edit
 alias xr="nvim ~/.Xresources"
-alias xrc="nvim ~/.wally/Xresources-clean"
 alias zshrc="nvim ~/.zshrc"
 alias i3config="nvim ~/.config/i3/config"
 alias polyconf="nvim ~/.config/polybar/config"
@@ -205,14 +204,8 @@ alias userChrome.css="nvim ~/thm/Firefox/userChrome.css"
 alias stconf="nvim ~/pro/xst/src/config.h"
 alias playlists="nvim ~/.config/mpv/tubify_playlists"
 alias airlinevim="nvim ~/.config/nvim/plugged/vim-airline/autoload/airline/themes/dark.vim"
-alias quteconf="nvim ~/.config/qutebrowser/config.py"
 alias comptonconf="nvim ~/.config/compton/compton.conf"
-alias rc.lua="nvim ~/.config/awesome/rc.lua"
-alias theme.lua="nvim ~/.config/awesome/themes/reasons/theme.lua"
-#alias awesomeconf="vim ~/.config/awesome/rc.lua"
 #alias subl="subl3"
-# Update qutebrowser
-alias quteup="(cd ~/pro/qutebrowser; git pull origin && tox -r -e mkvenv-pypi-old)"
 
 # nvidia optimus -> prime select 
 alias nvidia="sudo prime-select nvidia"
