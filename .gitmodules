@@ -7,3 +7,6 @@
 [submodule "tmux/.tmux"]
 	path = tmux/.tmux
 	url = https://github.com/gpakosz/.tmux.git
+[submodule "zsh/.zcustom/.zcustom/themes/powerlevel10k"]
+	path = zsh/.zcustom/.zcustom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
