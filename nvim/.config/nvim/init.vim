@@ -53,6 +53,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'junegunn/limelight.vim'
     Plug 'vim-pandoc/vim-pandoc'
     Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-pandoc/vim-rmarkdown'
     Plug 'godlygeek/tabular'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
     Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
