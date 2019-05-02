@@ -1,10 +1,19 @@
 [colors]
 cursor = #d8dee9
 cursor_foreground = #2e3440
+cursor_shape=underline
 
-foreground = #d8dee9
+##original from nord
+#foreground = #d8dee9
+
+foreground = #fffeeb
 foreground_bold = #d8dee9
-background = #2e3440
+
+##original from nord
+#background = #2e3440
+
+background = #334152
+
 
 highlight = #4c566a
 
