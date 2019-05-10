@@ -174,7 +174,8 @@ au BufNewFile,BufRead *.c
 " =================
 au BufNewFile,BufRead *.md
     \ set nofoldenable | 
-    let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"]
+    \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
+    \ :hi! link Conceal guifg=lightblue
 
 "python template
 if has("autocmd")
