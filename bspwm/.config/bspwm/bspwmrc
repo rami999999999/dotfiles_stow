@@ -43,5 +43,6 @@ bspc config automatic_scheme logest_side
 bspc rule -a URxvt:scratchy sticky=on state=floating rectangle=widthxheight+Xoffset+Yoffset
 
 #polybar -r -c ~/.config/polybar/config.trans.nord bspwm &
-polybar -r -c ~/.config/polybar/config.v2 top &
+#polybar -r -c ~/.config/polybar/config.v2 top &
+~/.config/polybar/launch.sh
 

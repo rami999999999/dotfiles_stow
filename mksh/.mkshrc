@@ -1,4 +1,4 @@
-. $HOME/github_repo/polyglot/polyglot.sh
+. $HOME/.config/mksh/polyglot/polyglot.sh
 
 bind '^L=clear-screen'
 

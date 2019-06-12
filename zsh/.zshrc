@@ -180,7 +180,7 @@ alias hc='herbstclient'
 alias ff='firefox'
 # Force tmux to use 256 colors
 # Either set this or TERM=xterm (or both if tmux keeps messing up?)
-#alias tmux="tmux -2"
+alias tmux="tmux -2"
 # clock
 #alias c="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &; clear"
 
@@ -193,29 +193,29 @@ alias netprocs="lsof -P -i -n"
 # alias vim="nvim" # not needed since i used update-alternatives
 alias init.vim="vim ~/.config/nvim/init.vim"
 
-# Quick edit
-alias xr="nvim ~/.Xresources"
-alias zshrc="nvim ~/.zshrc"
-alias i3config="nvim ~/.config/i3/config"
-alias polyconf="nvim ~/.config/polybar/config"
-alias dunstrc="nvim ~/.config/dunst/dunstrc"
-alias tint2rc="nvim ~/.config/tint2/tint2rc"
-alias userChrome.css="nvim ~/thm/Firefox/userChrome.css"
-alias stconf="nvim ~/pro/xst/src/config.h"
-alias playlists="nvim ~/.config/mpv/tubify_playlists"
-alias airlinevim="nvim ~/.config/nvim/plugged/vim-airline/autoload/airline/themes/dark.vim"
-alias comptonconf="nvim ~/.config/compton/compton.conf"
-#alias subl="subl3"
-
-# nvidia optimus -> prime select 
-alias nvidia="sudo prime-select nvidia"
-alias intel="sudo prime-select intel"
-# cpu governor
-alias gameoff="sudo cpufreq-set -g powersave"
-alias gameon="sudo cpufreq-set -g performance"
-
-# translate-shell: brief
-alias t='trans -brief'
+## Quick edit
+#alias xr="nvim ~/.Xresources"
+#alias zshrc="nvim ~/.zshrc"
+#alias i3config="nvim ~/.config/i3/config"
+#alias polyconf="nvim ~/.config/polybar/config"
+#alias dunstrc="nvim ~/.config/dunst/dunstrc"
+#alias tint2rc="nvim ~/.config/tint2/tint2rc"
+#alias userChrome.css="nvim ~/thm/Firefox/userChrome.css"
+#alias stconf="nvim ~/pro/xst/src/config.h"
+#alias playlists="nvim ~/.config/mpv/tubify_playlists"
+#alias airlinevim="nvim ~/.config/nvim/plugged/vim-airline/autoload/airline/themes/dark.vim"
+#alias comptonconf="nvim ~/.config/compton/compton.conf"
+##alias subl="subl3"
+#
+## nvidia optimus -> prime select 
+#alias nvidia="sudo prime-select nvidia"
+#alias intel="sudo prime-select intel"
+## cpu governor
+#alias gameoff="sudo cpufreq-set -g powersave"
+#alias gameon="sudo cpufreq-set -g performance"
+#
+## translate-shell: brief
+#alias t='trans -brief'
 
 # --- even-better-ls ---  
 #LS_COLORS=$(ls_colors_generator)
@@ -247,3 +247,10 @@ bindkey "^[[1;5C" forward-word
 # lxterminal doesnt detect diff between backspace and ctrl + backspace
 #bindkey "^?" backward-kill-word
 
+
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$HOME/dev/go/bin
+
+export TERM=xterm-256color
+
+alias 9plan="cd /usr/lib/plan9"

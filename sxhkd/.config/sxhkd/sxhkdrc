@@ -2,7 +2,7 @@
 
 # terminal
 super + Return
-  alacritty 
+ termite 
 
 super+shift+Return
     bspc rule -a \* -o state=floating rectangle=1000x500+0+0 center=true && termite -e 'tmux at -t float'
