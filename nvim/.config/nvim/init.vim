@@ -29,6 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rhysd/vim-color-spring-night'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    "Plug 'itchyny/lightline.vim'
     Plug 'scrooloose/nerdtree'
     Plug 'altercation/vim-colors-solarized'
     Plug 'morhetz/gruvbox' 
@@ -175,7 +176,16 @@ au BufNewFile,BufRead *.c
 au BufNewFile,BufRead *.md
     \ set nofoldenable | 
     \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
-    \ :hi! link Conceal guifg=lightblue
+
+" RMarkdown stuff
+" =================
+au BufNewFile,BufRead *.rmd
+    \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
+
+" hide buffers instead of closing them
+" Allows to change buffers with unsaved changes
+set hidden
+
 
 "python template
 if has("autocmd")
@@ -330,9 +340,24 @@ map <F2> :ls<CR>:b<Space>
 
 
 
+nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
+
 "packages needed for vim
 " autopep8
 " gofmt
 " fzf
 " clang
-nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
+
+
+hi! Conceal guifg=lightblue ctermfg=lightblue
+
+set hidden
+
+"let g:netrw_banner=0
+"let g:netrw_winsize=20
+"let g:netrw_liststyle=3
+"let g:netrw_localrmdir='rm -r'
+
+"toggle netrw on the left side of the editor
+nnoremap <C-n> :Lexplore<CR>
+

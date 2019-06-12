@@ -1,0 +1,24 @@
+. $HOME/github_repo/polyglot/polyglot.sh
+
+bind '^L=clear-screen'
+
+export EDITOR=nvim
+
+source $HOME/github_repo/fzf-mksh/completion.mksh
+source $HOME/github_repo/fzf-mksh/key-bindings.mksh
+
+
+PATH="/home/pedramos/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/pedramos/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/pedramos/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/pedramos/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/pedramos/perl5"; export PERL_MM_OPT;
+
+export GOPATH=$HOME/dev/go/
+
+export PATH=$PATH:$GOPATH/bin
+export TERM=xterm-256color
+
+
+export HISTSIZE=500000
+HISTFILE=$HOME/.history_mksh

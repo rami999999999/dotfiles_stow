@@ -10,3 +10,9 @@
 [submodule "zsh/.zcustom/.zcustom/themes/powerlevel10k"]
 	path = zsh/.zcustom/.zcustom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "mksh/.config/mksh/polyglot"]
+	path = mksh/.config/mksh/polyglot
+	url = https://github.com/agkozak/polyglot.git
+[submodule "mksh/.config/mksh/fzf-mksh"]
+	path = mksh/.config/mksh/fzf-mksh
+	url = https://github.com/seanlaguna/fzf-mksh.git
