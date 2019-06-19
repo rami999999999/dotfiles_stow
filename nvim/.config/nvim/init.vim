@@ -127,7 +127,7 @@ set breakindent
 set breakindentopt=shift:1
 set showbreak=↪\
 set linebreak
-set colorcolumn=90
+set colorcolumn=80
 set mouse=a
 
 
