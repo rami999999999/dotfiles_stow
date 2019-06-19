@@ -109,7 +109,7 @@ let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['f
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt']}
 let g:airline#extensions#ale#enabled = 1
 
-let g:ale_c_clangformat_options="-style Mozilla"
+let g:ale_c_clangformat_options="-style=file -assume-filename=.kernel-format"
 
 nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
 nmap <silent> <C-Down> <Plug>(ale_next_wrap)
