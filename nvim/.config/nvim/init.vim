@@ -20,11 +20,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   
   Plug 'tbastos/vim-lua'
   Plug 'neovim/nvimdev.nvim'
-  Plug 'Shougo/neosnippet.vim'
-  Plug 'Shougo/neosnippet-snippets'
     
   Plug 'Shougo/deol.nvim', { 'rev': 'a1b5108fd' }
-  
+  Plug 'itchyny/vim-gitbranch'  
   ""theming
     Plug 'rhysd/vim-color-spring-night'
     Plug 'vim-airline/vim-airline'
@@ -109,7 +107,7 @@ let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['f
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt']}
 let g:airline#extensions#ale#enabled = 1
 
-let g:ale_c_clangformat_options="-style=file -assume-filename=.kernel-format"
+let g:ale_c_clangformat_options="-style Mozilla"
 
 nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
 nmap <silent> <C-Down> <Plug>(ale_next_wrap)
@@ -127,7 +125,7 @@ set breakindent
 set breakindentopt=shift:1
 set showbreak=↪\
 set linebreak
-set colorcolumn=80
+set colorcolumn=90
 set mouse=a
 
 
@@ -249,6 +247,21 @@ let g:airline_detect_whitespace=0
 let g:airline_section_warning=' '
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
+
+"   lighlime config
+"   ===============
+
+"let g:lightline = {
+"      \ 'colorscheme': 'one',
+"      \ 'active': {
+"      \   'left': [ [ 'mode', 'paste' ],
+"      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"      \ },
+"      \ 'component_function': {
+"      \   'gitbranch': 'fugitive#head'
+"      \ },
+"      \ }
+
 
 set ttimeoutlen=10
 set noshowmode

@@ -4,9 +4,8 @@ bind '^L=clear-screen'
 
 export EDITOR=nvim
 
-source $HOME/github_repo/fzf-mksh/completion.mksh
-source $HOME/github_repo/fzf-mksh/key-bindings.mksh
-
+source $HOME/.config/mksh/fzf-mksh/completion.mksh
+source $HOME/.config/mksh/fzf-mksh/key-bindings.mksh
 
 PATH="/home/pedramos/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/pedramos/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -18,6 +17,23 @@ export GOPATH=$HOME/dev/go/
 
 export PATH=$PATH:$GOPATH/bin
 export TERM=xterm-256color
+
+set -o utf8-mode
+#set -o vi
+
+#bind '^X'=prefix-2
+#bind '^[['=prefix-2
+#bind 'ANSI-CurUp', 'PC-CurUp'=up-history
+#bind 'ANSI-CurDown', 'PC-CurDown'=down-history
+#bind '^XC'=forward-char
+#bind '^XD'=backward-char
+#bind '^X1~'=beginning-of-line
+#bind '^X7~'=beginning-of-line
+#bind '^XH'=beginning-of-line
+#bind '^X4~'=end-of-line
+#bind '^X8~'=end-of-line
+#bind '^XF'=end-of-line
+#bind '^X3~'=delete-char-forward
 
 
 export HISTSIZE=500000
