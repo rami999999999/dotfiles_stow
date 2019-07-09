@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo $#
-echo $@
 
 if (($# == 0)); then
     nvim -u $HOME/.config/nvim/simple.vim 
