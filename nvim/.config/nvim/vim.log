@@ -1,0 +1,513 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.019  000.019: --- NVIM STARTING ---
+000.611  000.592: locale set
+001.492  000.881: inits 1
+001.533  000.041: window checked
+001.910  000.377: parsing arguments
+002.151  000.241: expanding arguments
+002.359  000.208: inits 2
+003.890  001.531: init highlight
+004.444  000.034  000.034: sourcing /usr/share/nvim/archlinux.vim
+004.461  000.114  000.080: sourcing /etc/xdg//nvim/sysinit.vim
+008.471  003.770  003.770: sourcing /home/pedramos/.local/share/nvim/site/autoload/plug.vim
+027.468  000.083  000.083: sourcing /home/pedramos/.local/share/nvim/plugged/rust.vim/ftdetect/rust.vim
+034.017  000.047  000.047: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete-rust/ftdetect/rust.vim
+059.470  000.144  000.144: sourcing /home/pedramos/.local/share/nvim/plugged/vim-jinja/ftdetect/jinja.vim
+060.423  000.786  000.786: sourcing /home/pedramos/.local/share/nvim/plugged/vim-rmarkdown/ftdetect/rmarkdown.vim
+061.060  000.103  000.103: sourcing /home/pedramos/.local/share/nvim/plugged/neosnippet.vim/ftdetect/neosnippet.vim
+062.285  000.630  000.630: sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim
+062.595  000.100  000.100: sourcing /usr/share/vim/vimfiles/ftdetect/meson.vim
+062.951  024.263  022.501: sourcing /usr/share/nvim/runtime/filetype.vim
+063.957  000.371  000.371: sourcing /usr/share/nvim/runtime/ftplugin.vim
+065.294  000.766  000.766: sourcing /usr/share/nvim/runtime/indent.vim
+072.588  001.672  001.672: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+073.397  003.903  002.230: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+073.749  007.961  004.058: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+077.095  000.926  000.926: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+079.616  000.532  000.532: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+097.940  019.603  019.071: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/colors/spring-night.vim
+098.892  000.469  000.469: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/init.vim
+100.175  000.253  000.253: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/parts.vim
+102.288  004.003  003.281: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/section.vim
+105.350  000.656  000.656: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/highlighter.vim
+311.890  307.388  244.940: sourcing /home/pedramos/.config/nvim/init.vim
+311.943  000.552: sourcing vimrc file(s)
+313.197  000.266  000.266: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete.vim
+314.063  001.432  001.166: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/plugin/deoplete.vim
+316.392  001.410  001.410: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/completion.vim
+319.796  000.278  000.278: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/events.vim
+321.531  007.082  005.394: sourcing /home/pedramos/.local/share/nvim/plugged/ale/plugin/ale.vim
+322.258  000.215  000.215: sourcing /home/pedramos/.local/share/nvim/plugged/deol.nvim/plugin/deol.vim
+326.872  000.372  000.372: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/util.vim
+327.021  003.946  003.574: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/plugin/airline.vim
+327.348  000.054  000.054: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline-themes/plugin/airline-themes.vim
+329.394  000.362  000.362: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/autoload/nerdtree.vim
+334.763  002.313  002.313: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/path.vim
+335.726  000.332  000.332: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/menu_controller.vim
+336.124  000.192  000.192: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/menu_item.vim
+336.594  000.279  000.279: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/key_map.vim
+337.705  000.647  000.647: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/bookmark.vim
+338.470  000.470  000.470: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim
+339.635  000.954  000.954: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim
+340.254  000.443  000.443: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/opener.vim
+341.126  000.663  000.663: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/creator.vim
+341.597  000.151  000.151: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/flag_set.vim
+342.111  000.332  000.332: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/nerdtree.vim
+342.984  000.710  000.710: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/ui.vim
+344.477  001.268  001.268: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/event.vim
+345.110  000.173  000.173: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/notifier.vim
+346.505  001.071  001.071: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim
+365.380  001.488  001.488: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim
+379.608  004.643  004.643: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+381.317  015.655  011.011: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim
+381.880  000.288  000.288: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/vcs.vim
+386.349  003.975  003.975: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/nerdtree_plugin/webdevicons.vim
+395.318  067.799  036.031: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/plugin/NERD_tree.vim
+401.923  002.337  002.337: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline.vim
+407.544  011.077  008.740: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/plugin/webdevicons.vim
+411.247  003.084  003.084: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/plugin/tagbar.vim
+412.633  000.185  000.185: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/setup.vim
+413.461  001.842  001.657: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/plugin/neomake.vim
+414.031  000.123  000.123: sourcing /home/pedramos/.local/share/nvim/plugged/vim-mkdir/plugin/mkdir.vim
+415.343  001.046  001.046: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/plugin/Tabular.vim
+416.441  000.070  000.070: sourcing /usr/share/nvim/runtime/filetype.vim
+417.272  000.047  000.047: sourcing /usr/share/nvim/runtime/ftplugin.vim
+419.196  003.513  003.396: sourcing /home/pedramos/.local/share/nvim/plugged/jedi-vim/plugin/jedi.vim
+420.256  000.567  000.567: sourcing /home/pedramos/.local/share/nvim/plugged/neosnippet.vim/plugin/neosnippet.vim
+422.742  002.079  002.079: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/plugin/LanguageClient.vim
+425.110  001.478  001.478: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+425.281  000.046  000.046: sourcing /usr/share/nvim/runtime/plugin/health.vim
+425.960  000.637  000.637: sourcing /usr/share/nvim/runtime/plugin/man.vim
+428.477  002.186  002.186: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+429.241  000.620  000.620: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+433.392  004.089  004.089: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+438.092  002.555  002.555: sourcing /usr/share/nvim/runtime/autoload/remote/host.vim
+441.941  002.417  002.417: sourcing /usr/share/nvim/runtime/autoload/remote/define.vim
+442.781  008.106  003.134: sourcing /home/pedramos/.local/share/nvim/rplugin.vim
+442.858  009.193  001.087: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+446.781  002.739  002.739: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+447.298  000.218  000.218: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+449.233  001.412  001.412: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+450.190  000.737  000.737: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+450.764  000.358  000.358: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+452.115  001.232  001.232: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+457.280  004.699  004.699: sourcing /usr/share/vim/vimfiles/plugin/fzf.vim
+457.577  012.131: loading plugins
+457.985  000.408: loading packages
+461.233  002.670  002.670: sourcing /home/pedramos/.local/share/nvim/plugged/indentLine/after/plugin/indentLine.vim
+463.437  000.835  000.835: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/autoload/tabular.vim
+469.778  008.112  007.277: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/after/plugin/TabularMaps.vim
+469.907  001.140: loading after plugins
+469.924  000.018: inits 3
+475.745  005.821: reading ShaDa
+475.778  000.033: waiting for return
+2262.347  1786.569: clearing screen
+2264.506  000.572  000.572: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale.vim
+2267.115  001.827  001.827: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions.vim
+2267.986  000.207  000.207: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/quickfix.vim
+2268.740  000.217  000.217: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/netrw.vim
+2269.710  000.464  000.464: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/term.vim
+2271.397  000.698  000.698: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tagbar.vim
+2273.098  000.354  000.354: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/ale.vim
+2276.140  001.021  001.021: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim
+2278.600  000.433  000.433: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim
+2280.058  000.248  000.248: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/neomake.vim
+2280.818  000.206  000.206: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/po.vim
+2281.771  000.430  000.430: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/wordcount.vim
+2282.730  000.474  000.474: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline.vim
+2283.361  000.221  000.221: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/autoshow.vim
+2285.041  000.270  000.270: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/tabs.vim
+2286.375  000.414  000.414: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim
+2287.514  000.102  000.102: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/keymap.vim
+2289.556  001.603  001.603: sourcing /home/pedramos/.local/share/nvim/plugged/vimtex/autoload/vimtex.vim
+2300.337  007.773  007.773: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/vimtex.vim
+2317.038  000.642  000.642: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/autoload/airline/themes/spring_night.vim
+2326.026  001.021  001.021: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/autoload/airline/themes/spring_night.vim
+2327.100  000.266  000.266: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/themes.vim
+2487.335  001.685  001.685: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/builder.vim
+2504.866  001.225  001.225: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/default.vim
+2602.907  318.187: opening buffers
+2603.140  000.233: BufEnter autocommands
+2603.150  000.009: editing files in windows
+2603.909  000.493  000.493: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/init.vim
+2604.878  000.343  000.343: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/custom.vim
+2605.841  000.361  000.361: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/util.vim
+2607.026  000.379  000.379: sourcing /usr/share/nvim/runtime/autoload/provider/pythonx.vim
+2738.879  131.208  131.208: sourcing /usr/share/nvim/runtime/autoload/provider/python3.vim
+2739.818  000.242  000.242: sourcing /usr/share/nvim/runtime/autoload/provider.vim
+3095.781  000.447  000.447: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/mapping.vim
+3099.616  002.326  002.326: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/handler.vim
+3105.436  366.488: VimEnter autocommands
+3105.476  000.041: before starting main loop
+3109.713  000.279  000.279: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/core.vim
+3112.441  006.406  006.127: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake.vim
+3122.155  008.969  008.969: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/autoload/LanguageClient.vim
+3123.235  000.420  000.420: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/autoload/LSP.vim
+3125.185  000.397  000.397: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/ctrlspace.vim
+3126.818  000.562  000.562: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/builder.vim
+3130.047  000.531  000.531: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/buflist.vim
+3139.819  000.121  000.121: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/autoload/airline/extensions/tabline/formatters/webdevicons.vim
+3140.322  000.147  000.147: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters/default.vim
+3156.809  004.442  004.442: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar.vim
+3157.910  000.316  000.316: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/debug.vim
+3220.603  001.534  001.534: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/types/uctags.vim
+3221.480  000.196  000.196: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim
+3255.428  001.206  001.206: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/utils.vim
+3257.417  007.553  006.348: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/statusline.vim
+3259.146  000.991  000.991: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/engine.vim
+3259.843  000.249  000.249: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/statusline.vim
+3263.235  124.924: first screen update
+3263.254  000.019: --- NVIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.024  000.024: --- NVIM STARTING ---
+000.641  000.616: locale set
+001.445  000.804: inits 1
+001.473  000.029: window checked
+001.752  000.279: parsing arguments
+001.938  000.186: expanding arguments
+002.057  000.119: inits 2
+003.441  001.384: init highlight
+004.010  000.037  000.037: sourcing /usr/share/nvim/archlinux.vim
+004.036  000.134  000.097: sourcing /etc/xdg//nvim/sysinit.vim
+008.602  004.250  004.250: sourcing /home/pedramos/.local/share/nvim/site/autoload/plug.vim
+019.290  000.084  000.084: sourcing /home/pedramos/.local/share/nvim/plugged/rust.vim/ftdetect/rust.vim
+024.243  000.047  000.047: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete-rust/ftdetect/rust.vim
+043.467  000.120  000.120: sourcing /home/pedramos/.local/share/nvim/plugged/vim-jinja/ftdetect/jinja.vim
+044.677  000.978  000.978: sourcing /home/pedramos/.local/share/nvim/plugged/vim-rmarkdown/ftdetect/rmarkdown.vim
+045.093  000.098  000.098: sourcing /home/pedramos/.local/share/nvim/plugged/neosnippet.vim/ftdetect/neosnippet.vim
+045.548  000.054  000.054: sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim
+045.617  000.036  000.036: sourcing /usr/share/vim/vimfiles/ftdetect/meson.vim
+045.763  017.540  016.254: sourcing /usr/share/nvim/runtime/filetype.vim
+046.252  000.085  000.085: sourcing /usr/share/nvim/runtime/ftplugin.vim
+046.708  000.084  000.084: sourcing /usr/share/nvim/runtime/indent.vim
+048.629  000.840  000.840: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+049.092  001.796  000.957: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+049.161  002.286  000.490: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+051.673  000.563  000.563: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+053.427  000.437  000.437: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+055.653  003.179  002.742: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/colors/spring-night.vim
+056.270  000.181  000.181: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/init.vim
+057.182  000.156  000.156: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/parts.vim
+058.975  003.007  002.670: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/section.vim
+059.815  000.369  000.369: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/highlighter.vim
+060.456  056.374  024.881: sourcing /home/pedramos/.config/nvim/init.vim
+060.479  000.530: sourcing vimrc file(s)
+061.591  000.365  000.365: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete.vim
+062.325  001.278  000.913: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/plugin/deoplete.vim
+064.073  001.040  001.040: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/completion.vim
+065.815  000.241  000.241: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/events.vim
+067.311  004.716  003.435: sourcing /home/pedramos/.local/share/nvim/plugged/ale/plugin/ale.vim
+067.831  000.213  000.213: sourcing /home/pedramos/.local/share/nvim/plugged/deol.nvim/plugin/deol.vim
+070.414  000.406  000.406: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/util.vim
+070.630  002.589  002.182: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/plugin/airline.vim
+070.883  000.043  000.043: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline-themes/plugin/airline-themes.vim
+072.764  000.318  000.318: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/autoload/nerdtree.vim
+075.745  000.948  000.948: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/path.vim
+076.343  000.254  000.254: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/menu_controller.vim
+076.719  000.151  000.151: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/menu_item.vim
+077.115  000.235  000.235: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/key_map.vim
+077.897  000.465  000.465: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/bookmark.vim
+078.742  000.490  000.490: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim
+080.002  000.917  000.917: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim
+080.705  000.444  000.444: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/opener.vim
+082.203  000.927  000.927: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/creator.vim
+082.799  000.176  000.176: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/flag_set.vim
+083.300  000.239  000.239: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/nerdtree.vim
+084.328  000.786  000.786: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/ui.vim
+084.750  000.078  000.078: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/event.vim
+085.195  000.104  000.104: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/notifier.vim
+086.228  000.782  000.782: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim
+093.071  000.257  000.257: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim
+095.556  000.561  000.561: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+096.247  003.114  002.553: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim
+096.467  000.106  000.106: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/vcs.vim
+097.537  000.808  000.808: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/nerdtree_plugin/webdevicons.vim
+098.952  027.954  016.355: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/plugin/NERD_tree.vim
+101.507  000.358  000.358: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline.vim
+104.897  005.345  004.988: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/plugin/webdevicons.vim
+107.394  002.087  002.087: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/plugin/tagbar.vim
+108.687  000.129  000.129: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/setup.vim
+109.502  001.769  001.641: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/plugin/neomake.vim
+109.946  000.154  000.154: sourcing /home/pedramos/.local/share/nvim/plugged/vim-mkdir/plugin/mkdir.vim
+111.004  000.870  000.870: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/plugin/Tabular.vim
+111.918  000.088  000.088: sourcing /usr/share/nvim/runtime/filetype.vim
+112.345  000.029  000.029: sourcing /usr/share/nvim/runtime/ftplugin.vim
+113.620  002.341  002.225: sourcing /home/pedramos/.local/share/nvim/plugged/jedi-vim/plugin/jedi.vim
+114.251  000.293  000.293: sourcing /home/pedramos/.local/share/nvim/plugged/neosnippet.vim/plugin/neosnippet.vim
+116.981  002.527  002.527: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/plugin/LanguageClient.vim
+121.136  001.918  001.918: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+121.465  000.080  000.080: sourcing /usr/share/nvim/runtime/plugin/health.vim
+122.357  000.852  000.852: sourcing /usr/share/nvim/runtime/plugin/man.vim
+123.968  001.496  001.496: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+124.613  000.546  000.546: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+126.987  002.281  002.281: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+129.403  000.943  000.943: sourcing /usr/share/nvim/runtime/autoload/remote/host.vim
+131.213  001.011  001.011: sourcing /usr/share/nvim/runtime/autoload/remote/define.vim
+131.466  003.637  001.683: sourcing /home/pedramos/.local/share/nvim/rplugin.vim
+131.480  004.271  000.633: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+132.594  000.927  000.927: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+132.845  000.116  000.116: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+134.245  001.283  001.283: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+134.717  000.309  000.309: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+134.923  000.074  000.074: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+136.073  001.110  001.110: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+139.936  003.600  003.600: sourcing /usr/share/vim/vimfiles/plugin/fzf.vim
+140.051  008.530: loading plugins
+140.280  000.229: loading packages
+142.690  002.073  002.073: sourcing /home/pedramos/.local/share/nvim/plugged/indentLine/after/plugin/indentLine.vim
+144.267  000.554  000.554: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/autoload/tabular.vim
+149.137  006.103  005.549: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/after/plugin/TabularMaps.vim
+149.286  000.830: loading after plugins
+149.307  000.021: inits 3
+154.376  005.069: reading ShaDa
+156.677  002.301: clearing screen
+158.279  000.419  000.419: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale.vim
+159.612  000.673  000.673: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions.vim
+160.132  000.202  000.202: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/quickfix.vim
+160.523  000.076  000.076: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/netrw.vim
+160.958  000.100  000.100: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/term.vim
+161.685  000.215  000.215: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tagbar.vim
+162.796  000.252  000.252: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/ale.vim
+164.281  000.272  000.272: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim
+165.699  000.330  000.330: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim
+166.836  000.148  000.148: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/neomake.vim
+167.695  000.161  000.161: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/po.vim
+168.239  000.223  000.223: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/wordcount.vim
+168.844  000.283  000.283: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline.vim
+169.239  000.109  000.109: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/autoshow.vim
+170.680  000.255  000.255: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/tabs.vim
+172.568  000.485  000.485: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim
+174.028  000.100  000.100: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/keymap.vim
+175.662  001.165  001.165: sourcing /home/pedramos/.local/share/nvim/plugged/vimtex/autoload/vimtex.vim
+176.165  000.289  000.289: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/vimtex.vim
+192.670  001.430  001.430: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/autoload/airline/themes/spring_night.vim
+201.801  000.516  000.516: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/autoload/airline/themes/spring_night.vim
+202.903  000.341  000.341: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/themes.vim
+268.497  000.529  000.529: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/builder.vim
+269.639  000.176  000.176: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/default.vim
+326.461  161.036: opening buffers
+326.639  000.178: BufEnter autocommands
+326.755  000.116: editing files in windows
+327.394  000.402  000.402: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/init.vim
+328.358  000.376  000.376: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/custom.vim
+329.218  000.291  000.291: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/util.vim
+330.190  000.244  000.244: sourcing /usr/share/nvim/runtime/autoload/provider/pythonx.vim
+448.860  118.308  118.308: sourcing /usr/share/nvim/runtime/autoload/provider/python3.vim
+450.808  000.446  000.446: sourcing /usr/share/nvim/runtime/autoload/provider.vim
+749.070  000.519  000.519: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/mapping.vim
+749.843  000.409  000.409: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/handler.vim
+752.670  304.920: VimEnter autocommands
+752.721  000.051: before starting main loop
+760.919  006.225  006.225: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/core.vim
+763.209  009.728  003.503: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake.vim
+769.201  005.468  005.468: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/autoload/LanguageClient.vim
+770.150  000.363  000.363: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/autoload/LSP.vim
+771.668  000.382  000.382: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/ctrlspace.vim
+773.201  000.402  000.402: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/builder.vim
+773.851  000.178  000.178: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/buflist.vim
+780.039  000.099  000.099: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/autoload/airline/extensions/tabline/formatters/webdevicons.vim
+780.450  000.180  000.180: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters/default.vim
+793.277  003.550  003.550: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar.vim
+794.067  000.235  000.235: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/debug.vim
+862.112  000.942  000.942: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/types/uctags.vim
+862.511  000.129  000.129: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim
+890.481  001.100  001.100: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/utils.vim
+891.860  004.818  003.719: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/statusline.vim
+893.064  000.803  000.803: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/engine.vim
+893.605  000.268  000.268: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/statusline.vim
+896.700  116.435: first screen update
+896.718  000.018: --- NVIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.019  000.019: --- NVIM STARTING ---
+000.537  000.518: locale set
+001.167  000.630: inits 1
+001.187  000.020: window checked
+001.523  000.336: parsing arguments
+001.654  000.131: expanding arguments
+001.765  000.111: inits 2
+002.750  000.985: init highlight
+003.172  000.029  000.029: sourcing /usr/share/nvim/archlinux.vim
+003.181  000.087  000.057: sourcing /etc/xdg//nvim/sysinit.vim
+010.217  004.953  004.953: sourcing /home/pedramos/.local/share/nvim/site/autoload/plug.vim
+023.202  000.075  000.075: sourcing /home/pedramos/.local/share/nvim/plugged/rust.vim/ftdetect/rust.vim
+029.690  000.104  000.104: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete-rust/ftdetect/rust.vim
+052.760  000.268  000.268: sourcing /home/pedramos/.local/share/nvim/plugged/vim-jinja/ftdetect/jinja.vim
+055.309  002.315  002.315: sourcing /home/pedramos/.local/share/nvim/plugged/vim-rmarkdown/ftdetect/rmarkdown.vim
+056.260  000.084  000.084: sourcing /home/pedramos/.local/share/nvim/plugged/neosnippet.vim/ftdetect/neosnippet.vim
+056.805  000.030  000.030: sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim
+056.985  000.051  000.051: sourcing /usr/share/vim/vimfiles/ftdetect/meson.vim
+057.187  021.940  019.191: sourcing /usr/share/nvim/runtime/filetype.vim
+058.074  000.134  000.134: sourcing /usr/share/nvim/runtime/ftplugin.vim
+058.768  000.083  000.083: sourcing /usr/share/nvim/runtime/indent.vim
+061.377  000.845  000.845: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+061.969  001.871  001.026: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+062.034  002.672  000.801: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+064.367  000.498  000.498: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+066.467  000.667  000.667: sourcing /usr/share/nvim/runtime/syntax/syncolor.vim
+069.241  004.058  003.391: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/colors/spring-night.vim
+070.273  000.407  000.407: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/init.vim
+071.498  000.215  000.215: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/parts.vim
+073.662  003.977  003.355: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/section.vim
+074.697  000.418  000.418: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/highlighter.vim
+075.440  072.204  033.290: sourcing /home/pedramos/.config/nvim/init.vim
+075.487  000.447: sourcing vimrc file(s)
+076.759  000.281  000.281: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete.vim
+077.427  001.121  000.840: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/plugin/deoplete.vim
+079.305  000.952  000.952: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/completion.vim
+080.977  000.217  000.217: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/events.vim
+081.650  003.842  002.673: sourcing /home/pedramos/.local/share/nvim/plugged/ale/plugin/ale.vim
+082.074  000.198  000.198: sourcing /home/pedramos/.local/share/nvim/plugged/deol.nvim/plugin/deol.vim
+084.774  000.257  000.257: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/util.vim
+084.962  002.612  002.355: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/plugin/airline.vim
+085.221  000.049  000.049: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline-themes/plugin/airline-themes.vim
+086.940  000.301  000.301: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/autoload/nerdtree.vim
+091.640  002.233  002.233: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/path.vim
+092.265  000.288  000.288: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/menu_controller.vim
+092.536  000.119  000.119: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/menu_item.vim
+092.856  000.194  000.194: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/key_map.vim
+093.471  000.387  000.387: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/bookmark.vim
+094.085  000.485  000.485: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim
+095.562  000.958  000.958: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim
+096.213  000.405  000.405: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/opener.vim
+097.078  000.630  000.630: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/creator.vim
+097.620  000.111  000.111: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/flag_set.vim
+098.058  000.205  000.205: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/nerdtree.vim
+098.761  000.515  000.515: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/ui.vim
+098.951  000.036  000.036: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/event.vim
+099.167  000.100  000.100: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/lib/nerdtree/notifier.vim
+100.059  000.653  000.653: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim
+108.214  000.352  000.352: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim
+110.557  000.567  000.567: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+111.252  002.942  002.374: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim
+111.519  000.111  000.111: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/nerdtree_plugin/vcs.vim
+112.727  001.029  001.029: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/nerdtree_plugin/webdevicons.vim
+113.839  028.457  016.403: sourcing /home/pedramos/.local/share/nvim/plugged/nerdtree/plugin/NERD_tree.vim
+116.449  000.432  000.432: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline.vim
+119.895  005.788  005.356: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/plugin/webdevicons.vim
+122.839  002.508  002.508: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/plugin/tagbar.vim
+124.076  000.119  000.119: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/setup.vim
+124.748  001.575  001.456: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/plugin/neomake.vim
+125.058  000.083  000.083: sourcing /home/pedramos/.local/share/nvim/plugged/vim-mkdir/plugin/mkdir.vim
+126.170  000.923  000.923: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/plugin/Tabular.vim
+126.881  000.029  000.029: sourcing /usr/share/nvim/runtime/filetype.vim
+127.276  000.024  000.024: sourcing /usr/share/nvim/runtime/ftplugin.vim
+128.368  001.917  001.864: sourcing /home/pedramos/.local/share/nvim/plugged/jedi-vim/plugin/jedi.vim
+129.024  000.328  000.328: sourcing /home/pedramos/.local/share/nvim/plugged/neosnippet.vim/plugin/neosnippet.vim
+131.193  001.953  001.953: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/plugin/LanguageClient.vim
+133.317  001.113  001.113: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+133.451  000.041  000.041: sourcing /usr/share/nvim/runtime/plugin/health.vim
+134.418  000.942  000.942: sourcing /usr/share/nvim/runtime/plugin/man.vim
+136.268  001.663  001.663: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+137.183  000.756  000.756: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+139.754  002.492  002.492: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+142.187  000.847  000.847: sourcing /usr/share/nvim/runtime/autoload/remote/host.vim
+144.088  000.957  000.957: sourcing /usr/share/nvim/runtime/autoload/remote/define.vim
+144.396  003.628  001.824: sourcing /home/pedramos/.local/share/nvim/rplugin.vim
+144.415  004.378  000.750: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+145.401  000.894  000.894: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+145.629  000.095  000.095: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+146.775  001.045  001.045: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+147.140  000.210  000.210: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+147.229  000.043  000.043: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+148.206  000.894  000.894: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+154.089  005.283  005.283: sourcing /usr/share/vim/vimfiles/plugin/fzf.vim
+154.218  007.528: loading plugins
+154.463  000.245: loading packages
+156.762  001.924  001.924: sourcing /home/pedramos/.local/share/nvim/plugged/indentLine/after/plugin/indentLine.vim
+158.557  000.620  000.620: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/autoload/tabular.vim
+164.656  007.582  006.962: sourcing /home/pedramos/.local/share/nvim/plugged/tabular/after/plugin/TabularMaps.vim
+164.800  000.830: loading after plugins
+164.817  000.018: inits 3
+169.629  004.812: reading ShaDa
+172.720  003.091: clearing screen
+180.509  000.582  000.582: sourcing /usr/share/nvim/runtime/ftplugin/vim.vim
+182.341  000.234  000.234: sourcing /usr/share/nvim/runtime/indent/vim.vim
+194.851  011.324  011.324: sourcing /usr/share/nvim/runtime/syntax/vim.vim
+202.012  006.825  006.825: sourcing /usr/share/nvim/runtime/syntax/vim/generated.vim
+204.632  000.665  000.665: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions.vim
+205.194  000.182  000.182: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/quickfix.vim
+205.725  000.100  000.100: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/netrw.vim
+206.178  000.095  000.095: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/term.vim
+207.203  000.548  000.548: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tagbar.vim
+209.045  000.568  000.568: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/ale.vim
+211.901  000.283  000.283: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim
+213.440  000.340  000.340: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim
+214.913  000.155  000.155: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/neomake.vim
+215.587  000.160  000.160: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/po.vim
+216.263  000.332  000.332: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/wordcount.vim
+216.863  000.367  000.367: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline.vim
+217.641  000.385  000.385: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/autoshow.vim
+219.246  000.311  000.311: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/tabs.vim
+221.232  000.457  000.457: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim
+223.559  000.183  000.183: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/keymap.vim
+225.598  001.441  001.441: sourcing /home/pedramos/.local/share/nvim/plugged/vimtex/autoload/vimtex.vim
+226.498  000.660  000.660: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/vimtex.vim
+244.468  000.605  000.605: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/autoload/airline/themes/spring_night.vim
+249.332  000.323  000.323: sourcing /home/pedramos/.local/share/nvim/plugged/vim-color-spring-night/autoload/airline/themes/spring_night.vim
+249.834  000.140  000.140: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/themes.vim
+308.638  000.375  000.375: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/builder.vim
+310.035  000.234  000.234: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/default.vim
+363.605  010.602  010.602: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/autoload/LanguageClient.vim
+364.666  000.361  000.361: sourcing /home/pedramos/.local/share/nvim/plugged/LanguageClient-neovim/autoload/LSP.vim
+366.771  000.441  000.441: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale.vim
+367.718  000.573  000.573: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/util.vim
+368.540  000.496  000.496: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/linter.vim
+370.134  001.043  001.043: sourcing /home/pedramos/.local/share/nvim/plugged/ale/ale_linters/vim/ale_custom_linting_rules.vim
+371.634  001.294  001.294: sourcing /home/pedramos/.local/share/nvim/plugged/ale/ale_linters/vim/vint.vim
+374.441  000.746  000.746: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/engine.vim
+375.070  000.408  000.408: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/command.vim
+377.424  000.237  000.237: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/history.vim
+379.216  001.226  001.226: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/sign.vim
+380.821  000.350  000.350: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/list.vim
+381.976  000.922  000.922: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/highlight.vim
+382.891  000.408  000.408: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/cursor.vim
+385.197  165.498: opening buffers
+386.375  001.178: BufEnter autocommands
+386.396  000.021: editing files in windows
+386.979  000.358  000.358: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/init.vim
+387.766  000.285  000.285: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/custom.vim
+389.115  000.295  000.295: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/util.vim
+390.322  000.327  000.327: sourcing /usr/share/nvim/runtime/autoload/provider/pythonx.vim
+487.734  096.813  096.813: sourcing /usr/share/nvim/runtime/autoload/provider/python3.vim
+489.101  000.454  000.454: sourcing /usr/share/nvim/runtime/autoload/provider.vim
+759.204  000.537  000.537: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/mapping.vim
+760.068  000.411  000.411: sourcing /home/pedramos/.local/share/nvim/plugged/deoplete.nvim/autoload/deoplete/handler.vim
+762.039  276.163: VimEnter autocommands
+762.062  000.023: before starting main loop
+764.478  000.262  000.262: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/core.vim
+766.844  003.873  003.611: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake.vim
+768.920  000.247  000.247: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/ctrlspace.vim
+769.981  000.273  000.273: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/builder.vim
+770.452  000.115  000.115: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/buflist.vim
+775.586  000.114  000.114: sourcing /home/pedramos/.local/share/nvim/plugged/vim-devicons/autoload/airline/extensions/tabline/formatters/webdevicons.vim
+775.887  000.106  000.106: sourcing /home/pedramos/.local/share/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters/default.vim
+798.910  003.050  003.050: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar.vim
+799.796  000.339  000.339: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/debug.vim
+879.043  001.141  001.141: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/types/uctags.vim
+879.918  000.316  000.316: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim
+908.870  000.561  000.561: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim
+934.539  000.439  000.439: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim
+935.081  000.288  000.288: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim
+1012.205  000.231  000.231: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim
+1018.531  000.163  000.163: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/sorting.vim
+1034.373  000.186  000.186: sourcing /home/pedramos/.local/share/nvim/plugged/tagbar/autoload/tagbar/state.vim
+1040.109  001.298  001.298: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/utils.vim
+1042.754  006.136  004.838: sourcing /home/pedramos/.local/share/nvim/plugged/neomake/autoload/neomake/statusline.vim
+1043.657  000.213  000.213: sourcing /home/pedramos/.local/share/nvim/plugged/ale/autoload/ale/statusline.vim
+1047.074  267.222: first screen update
+1047.087  000.013: --- NVIM STARTED ---

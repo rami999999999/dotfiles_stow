@@ -18,8 +18,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   "Ale for Linting
   Plug 'w0rp/ale'
   
-  Plug 'tbastos/vim-lua'
-  Plug 'neovim/nvimdev.nvim'
+  "Plug 'tbastos/vim-lua'
+  "Plug 'neovim/nvimdev.nvim'
     
   Plug 'Shougo/deol.nvim', { 'rev': 'a1b5108fd' }
   Plug 'itchyny/vim-gitbranch'  
@@ -29,9 +29,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-airline/vim-airline-themes'
     "Plug 'itchyny/lightline.vim'
     Plug 'scrooloose/nerdtree'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'morhetz/gruvbox' 
-    Plug 'drewtempelmeyer/palenight.vim'
+    "Plug 'altercation/vim-colors-solarized'
+    "Plug 'morhetz/gruvbox' 
+    "Plug 'drewtempelmeyer/palenight.vim'
     " Nice icons
     Plug 'ryanoasis/vim-devicons'    
     
@@ -42,27 +42,26 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'majutsushi/tagbar'
 
     Plug 'lepture/vim-jinja'
-    Plug 'rust-lang/rust.vim'
+    Plug 'rust-lang/rust.vim', {'for':'rust'}
     "Plug 'fatih/vim-go'
     "Plug 'vim-perl/vim-perl'
     Plug 'neomake/neomake'
     "utils
     Plug 'pbrisbin/vim-mkdir'
-    Plug 'junegunn/goyo.vim'
-    Plug 'junegunn/limelight.vim'
-    Plug 'vim-pandoc/vim-pandoc'
-    Plug 'vim-pandoc/vim-pandoc-syntax'
-    Plug 'vim-pandoc/vim-rmarkdown'
+    Plug 'junegunn/goyo.vim', {'on':'GoyoEnter'}
+    Plug 'junegunn/limelight.vim', {'on':'GoyoEnter'}
+    Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','rmarkdown']}
+    Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','rmarkdown']}
+    Plug 'vim-pandoc/vim-rmarkdown', {'for':['markdown','rmarkdown']}
     Plug 'godlygeek/tabular'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
-    Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
-    Plug 'lervag/vimtex'
-    Plug 'zchee/deoplete-go'
-    Plug 'zchee/deoplete-jedi'
-    Plug 'davidhalter/jedi-vim'
-    Plug 'sebastianmarkow/deoplete-rust'
+    "Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
+    Plug 'lervag/vimtex', {'for':['latex']}
+    Plug 'zchee/deoplete-go', {'for':['go']}
+    Plug 'zchee/deoplete-jedi', {'for':['python']}
+    Plug 'davidhalter/jedi-vim', {'for':['python']}
+    Plug 'sebastianmarkow/deoplete-rust', {'for':['rust']}
     Plug 'fszymanski/deoplete-emoji'
-    Plug 'Shougo/deoplete-clangx'
+    Plug 'Shougo/deoplete-clangx', {'for':['C']}
     Plug 'deathlyfrantic/deoplete-spell'
     Plug 'Shougo/neosnippet.vim'
     Plug 'Shougo/neosnippet-snippets'
@@ -373,4 +372,6 @@ set hidden
 
 "toggle netrw on the left side of the editor
 nnoremap <C-n> :Lexplore<CR>
+
+
 
