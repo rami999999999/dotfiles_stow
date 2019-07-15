@@ -342,7 +342,8 @@ map <F2> :ls<CR>:b<Space>
 
 nnoremap <silent> <Leader><Enter> :Buffer <CR>
 nnoremap <silent> <Leader>n :Files<CR>
-nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader>l :BLines<CR>
+nnoremap <silent> <Leader>L :Lines<CR>
 nnoremap <silent> <Leader>m :Marks<CR>
 
 
