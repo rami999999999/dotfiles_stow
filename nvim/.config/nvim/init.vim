@@ -17,7 +17,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'mdempsky/gocode', {'rtp': 'nvim/'}
   "Ale for Linting
   Plug 'w0rp/ale'
-  
+  Plug 'junegunn/fzf.vim'
   "Plug 'tbastos/vim-lua'
   "Plug 'neovim/nvimdev.nvim'
     
@@ -70,8 +70,6 @@ call plug#begin('~/.local/share/nvim/plugged')
         \ 'do': 'bash install.sh',
         \ } 
 call plug#end()
-
-
 
 let g:LanguageClient_autoStart = 1
 
@@ -128,7 +126,7 @@ set colorcolumn=90
 set mouse=a
 
 
-" Latex styff
+" Latex stuff
 " ============
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -340,16 +338,12 @@ endfunction
 " FZF
 " =============
 
-nnoremap <silent> <Leader><Enter> :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
-nnoremap <silent> <Leader>n :FZF<CR>
-
 map <F2> :ls<CR>:b<Space>
 
+nnoremap <silent> <Leader><Enter> :Buffer <CR>
+nnoremap <silent> <Leader>n :Files<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader>m :Marks<CR>
 
 
 nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
@@ -361,7 +355,6 @@ nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
 " clang
 
 
-hi! Conceal guifg=lightblue ctermfg=lightblue
 
 set hidden
 
@@ -369,9 +362,11 @@ set hidden
 "let g:netrw_winsize=20
 "let g:netrw_liststyle=3
 "let g:netrw_localrmdir='rm -r'
+"
+""toggle netrw on the left side of the editor
+"nnoremap <C-n> :Lexplore<CR>
 
-"toggle netrw on the left side of the editor
-nnoremap <C-n> :Lexplore<CR>
-
+"hi! Conceal guifg=lightblue ctermfg=lightblue
+let g:indentLine_setColors=0
 
 
