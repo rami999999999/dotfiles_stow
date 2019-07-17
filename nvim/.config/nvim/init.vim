@@ -148,13 +148,6 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-    "let python_highlight_all=1
-    "let python_space_error_highlight = 0
-    "let python_no_builtin_highlight = 1
-    "let python_no_doctest_code_highlight = 1
-    "let python_no_doctest_highlight = 1
-    "let python_no_exception_highlight = 1
-    "let python_no_number_highlight = 1
 
 
 " C stuff
@@ -167,6 +160,14 @@ au BufNewFile,BufRead *.c
 	\ set expandtab |
 	\ set autoindent |
 	\ set fileformat=unix
+
+" sh stuff
+" ============
+au BufNewFile,BufRead *.sh,*.ksh
+    \ set textwidth=79 |
+    \ set noexpandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 
 " Markdown stuff
 " =================
