@@ -12,8 +12,6 @@ ZSH_THEME="garyblessington"
 # Autojump
 . /usr/share/autojump/autojump.zsh
 
-# Import colorscheme from wal
-#(wal -r &)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,7 +55,7 @@ ZSH_CUSTOM=$HOME/.zcustom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,12 +84,6 @@ echo -e -n "\x1b[\x32 q" # changes to steady block
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Find new executables in path
 zstyle ':completion:*' rehash true
 
@@ -100,28 +92,6 @@ autoload -Uz bracketed-paste-magic
 zle -N bracketed-paste bracketed-paste-magic
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
-
-# --- Remembering recent directories ---
-# --- NOTE: Doesn't work if you have more than one zsh session open, and attempt to cd, due to a conflict in both sessions writing to the same file. ---
-#DIRSTACKFILE="$HOME/.cache/zsh/dirs"
-#if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
-  #dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
-  #[[ -d $dirstack[1] ]] && cd $dirstack[1]
-#fi
-#chpwd() {
-  #print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
-#}
-
-#DIRSTACKSIZE=20
-
-#setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
-
-### Remove duplicate entries
-#setopt PUSHD_IGNORE_DUPS
-
-### This reverts the +/- operators.
-#setopt PUSHD_MINUS
-# --------------------------------------
 
 # Allows st to use different cursors in different vim modes (in neovim)
 #export TERM=xterm
@@ -137,29 +107,6 @@ zle -N self-insert url-quote-magic
 #if [[ $TERM == xterm-termite ]]; then
 #  source /etc/profile.d/vte-2.91.sh
 #fi
-
-# Freeze and unfreeze processes (for example: stop firefox)
-stop(){
-  if [ $# -ne 1 ]; then
-          echo 1>&2 Usage: stop process
-  else
-    PROCESS=$1
-    echo "Stopping processes with the word ${tGreen}$1${tReset}"
-    ps axw | grep -i $1 | awk -v PROC="$1" '{print $1}' | xargs kill -STOP
-  fi
-}
-
-cont(){
-  if [ $# -ne 1 ]; then
-          echo 1>&2 Usage: cont process
-  else
-    PROCESS=$1
-    echo "Continuing processes with the word ${tGreen}$1${tReset}"
-    ps axw | grep -i $1 | awk -v PROC="$1" '{print $1}' | xargs kill -CONT
-  fi
-}
-
-export WEECHAT_HOME="~/.config/weechat"
 
 export EDITOR=nvim
 export BROWSER=firefox
@@ -191,11 +138,11 @@ alias netprocs="lsof -P -i -n"
 
 # neovim
 # alias vim="nvim" # not needed since i used update-alternatives
-alias init.vim="vim ~/.config/nvim/init.vim"
+alias init.vim="nvim ~/.config/nvim/init.vim"
 
 ## Quick edit
 #alias xr="nvim ~/.Xresources"
-#alias zshrc="nvim ~/.zshrc"
+alias zshrc="nvim ~/.zshrc"
 #alias i3config="nvim ~/.config/i3/config"
 #alias polyconf="nvim ~/.config/polybar/config"
 #alias dunstrc="nvim ~/.config/dunst/dunstrc"
@@ -205,7 +152,7 @@ alias init.vim="vim ~/.config/nvim/init.vim"
 #alias playlists="nvim ~/.config/mpv/tubify_playlists"
 #alias airlinevim="nvim ~/.config/nvim/plugged/vim-airline/autoload/airline/themes/dark.vim"
 #alias comptonconf="nvim ~/.config/compton/compton.conf"
-##alias subl="subl3"
+alias subl="subl3"
 #
 ## nvidia optimus -> prime select 
 #alias nvidia="sudo prime-select nvidia"
@@ -217,23 +164,6 @@ alias init.vim="vim ~/.config/nvim/init.vim"
 ## translate-shell: brief
 #alias t='trans -brief'
 
-# --- even-better-ls ---  
-#LS_COLORS=$(ls_colors_generator)
-#run_ls() {
-#        ls-i --color=auto --group-directories-first -w $(tput cols) "$@"
-#}
-#
-#run_dir() {
-#        dir-i --color=auto --group-directories-first -w $(tput cols) "$@"
-#}
-#
-#run_vdir() {
-#        vdir-i --color=auto --group-directories-first -w $(tput cols) "$@"
-#}
-#alias ls="run_ls"
-#alias dir="run_dir"
-#alias vdir="run_vdir"
-# --- ---
 
 # urxvt
 #bindkey "^[Od" backward-word
