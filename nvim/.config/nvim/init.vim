@@ -164,7 +164,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-"set conceallevel=0
 let g:tex_conceal='abdmg'
 
 
@@ -179,6 +178,13 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+"python template
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.py 0r ~/.config/nvim/templates/py_template.py
+  augroup END
+endif
 
 " C stuff
 " =============
@@ -202,7 +208,6 @@ au BufNewFile,BufRead *.sh,*.ksh
 " Markdown stuff
 " =================
 
-set concealcursor="nc"
 
 au BufNewFile,BufRead *.md,*.rmd
     \ set nofoldenable |
@@ -212,12 +217,8 @@ au BufNewFile,BufRead *.md,*.rmd
     \ set autoindent |
     \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
 
-"python template
-if has("autocmd")
-  augroup templates
-    autocmd BufNewFile *.py 0r ~/.config/nvim/templates/py_template.py
-  augroup END
-endif
+set concealcursor="nc"
+
 
 
 " Colors
@@ -381,5 +382,6 @@ nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
 
 "hi! Conceal guifg=lightblue ctermfg=lightblue
 let g:indentLine_setColors=0
+let g:indentLine_setConceal = 0
 
 
