@@ -47,12 +47,15 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Plug 'vim-perl/vim-perl'
     "utils
     Plug 'pbrisbin/vim-mkdir'
+    
     Plug 'junegunn/goyo.vim', {'on':'GoyoEnter'}
     Plug 'junegunn/limelight.vim', {'on':'GoyoEnter'}
-    Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','rmarkdown']}
-    Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','rmarkdown']}
-    Plug 'vim-pandoc/vim-rmarkdown', {'for':['markdown','rmarkdown']}
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-pandoc/vim-rmarkdown'
     Plug 'godlygeek/tabular'
+    Plug 'reedes/vim-pencil'
+    
     "Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
     Plug 'lervag/vimtex', {'for':['latex']}
     Plug 'zchee/deoplete-go', {'for':['go']}
@@ -76,6 +79,9 @@ let g:LanguageClient_autoStart = 1
 "    \ 'sh': ['bash-language-server', 'start']
 "    \ }
 
+" ALLE Config
+" ================
+
 let g:ale_enabled = 1
 let g:ale_sign_error = '✖︎'
 highlight ALEErrorSign guifg=red ctermfg=red
@@ -89,29 +95,28 @@ let g:move_key_modifier = 'N'
 "let g:ale_lint_on_enter = 1
 "let g:ale_lint_on_save = 1
 "let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
-let g:ale_type_map = {
-\ 'perlcritic': {'ES': 'WS', 'E': 'W'},
-\}
-
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang/'
-let g:clang_complete_auto = 1
-
-
+let g:ale_type_map = {'perlcritic': {'ES': 'WS', 'E': 'W'}}
 " let g:ale_sign_column_always = 1                " ale enabled
 "let g:ale_sign_column_always = 1
 let g:ale_completion_enabled=1
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls'],'sh':['shellcheck']}
-let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
-let g:airline#extensions#ale#enabled = 1
 
+let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls'],'sh':['shellcheck']}
+
+let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
+
+let g:airline#extensions#ale#enabled = 1
 let g:ale_c_clangformat_options="-style Mozilla"
 
 nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
 nmap <silent> <C-Down> <Plug>(ale_next_wrap)
 
 
+" Deoplete
+" ==========
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang/'
+let g:clang_complete_auto = 1
 
 set rtp+=/usr/local/opt/fzf
 
@@ -124,8 +129,34 @@ set breakindent
 set breakindentopt=shift:1
 set showbreak=↪\
 set linebreak
-set colorcolumn=90
+set colorcolumn=79
+set formatoptions+=t
+
 set mouse=a
+
+" hide buffers instead of closing them
+" Allows to change buffers with unsaved changes
+set hidden
+
+set clipboard+=unnamedplus
+set autoindent
+set ts=4
+set expandtab
+set shiftwidth=4
+set sts=4
+set smarttab
+set showmatch
+
+set cursorline
+
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
+
+let mapleader=","       " leader is comma
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 
 
 " Latex stuff
@@ -133,8 +164,9 @@ set mouse=a
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
+"set conceallevel=0
 let g:tex_conceal='abdmg'
+
 
 
 " Python stuff
@@ -147,8 +179,6 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
-
-
 
 " C stuff
 " =============
@@ -171,19 +201,16 @@ au BufNewFile,BufRead *.sh,*.ksh
 
 " Markdown stuff
 " =================
-au BufNewFile,BufRead *.md
-    \ set nofoldenable | 
+
+set concealcursor="nc"
+
+au BufNewFile,BufRead *.md,*.rmd
+    \ set nofoldenable |
+    \ set expandtab |
+    \ set textwidth=79 |
+    \ set fileformat=unix |
+    \ set autoindent |
     \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
-
-" RMarkdown stuff
-" =================
-au BufNewFile,BufRead *.rmd
-    \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
-
-" hide buffers instead of closing them
-" Allows to change buffers with unsaved changes
-set hidden
-
 
 "python template
 if has("autocmd")
@@ -193,16 +220,8 @@ if has("autocmd")
 endif
 
 
-
-set clipboard+=unnamedplus
-set autoindent
-set ts=4
-set expandtab
-set shiftwidth=4
-set sts=4
-set smarttab
-set showmatch
-
+" Colors
+" =========
 set t_Co=256
 "color desert
 "colorscheme solarized
@@ -225,16 +244,7 @@ colorscheme spring-night
 let g:airline_theme = 'spring_night'
 set guicursor=
 "let g:airline_theme='nord'
-set cursorline
 
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
-
-
-let mapleader=","       " leader is comma
-
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
 
 "airline config
 "=================
@@ -360,7 +370,6 @@ nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
 
 
 
-set hidden
 
 "let g:netrw_banner=0
 "let g:netrw_winsize=20
