@@ -118,6 +118,10 @@ let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header='/usr/lib/clang/'
 let g:clang_complete_auto = 1
 
+
+" VIM options
+" ============
+
 set rtp+=/usr/local/opt/fzf
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)

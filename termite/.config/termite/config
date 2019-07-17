@@ -1,7 +1,7 @@
 [colors]
 cursor = #d8dee9
 cursor_foreground = #2e3440
-cursor_shape=underline
+cursor_shape=block
 
 ##original from nord
 #foreground = #d8dee9
@@ -36,5 +36,5 @@ color15 = #eceff4
 
 
 [options]
-font = Iosevka Nerd Font 14
-clickable_url = false
+font = Iosevka Nerd Font 18
+clickable_url = true
