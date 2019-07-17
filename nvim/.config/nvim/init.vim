@@ -45,7 +45,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rust-lang/rust.vim', {'for':'rust'}
     "Plug 'fatih/vim-go'
     "Plug 'vim-perl/vim-perl'
-    Plug 'neomake/neomake'
     "utils
     Plug 'pbrisbin/vim-mkdir'
     Plug 'junegunn/goyo.vim', {'on':'GoyoEnter'}
@@ -73,6 +72,9 @@ call plug#end()
 
 let g:LanguageClient_autoStart = 1
 
+"let g:LanguageClient_serverCommands = {
+"    \ 'sh': ['bash-language-server', 'start']
+"    \ }
 
 let g:ale_enabled = 1
 let g:ale_sign_error = '✖︎'
@@ -100,8 +102,8 @@ let g:clang_complete_auto = 1
 "let g:ale_sign_column_always = 1
 let g:ale_completion_enabled=1
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls']}
-let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt']}
+let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls'],'sh':['shellcheck']}
+let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['autopep8'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
 let g:airline#extensions#ale#enabled = 1
 
 let g:ale_c_clangformat_options="-style Mozilla"
