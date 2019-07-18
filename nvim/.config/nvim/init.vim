@@ -55,7 +55,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-pandoc/vim-rmarkdown'
     Plug 'godlygeek/tabular'
     Plug 'reedes/vim-pencil'
-    
+   
+    Plug 'cespare/vim-toml'
     "Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
     Plug 'lervag/vimtex', {'for':['latex']}
     Plug 'zchee/deoplete-go', {'for':['go']}
