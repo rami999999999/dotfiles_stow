@@ -220,7 +220,12 @@ au BufNewFile,BufRead *.md,*.rmd
     \ set textwidth=79 |
     \ set fileformat=unix |
     \ set autoindent |
-    \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] | 
+    \ set formatoptions+=t |
+    \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] |
+    \ let g:pandoc#formatting#textwidth = 79 |
+    \ let g:pandoc#formatting#mode='ha' 
+"|
+"    \  call pandoc#formatting#UseHardWraps()
 
 set concealcursor="nc"
 
