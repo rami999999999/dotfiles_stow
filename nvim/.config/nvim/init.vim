@@ -223,7 +223,7 @@ au BufNewFile,BufRead *.md,*.rmd
     \ set formatoptions+=t |
     \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] |
     \ let g:pandoc#formatting#textwidth = 79 |
-    \ let g:pandoc#formatting#mode='ha' 
+    \ let g:pandoc#formatting#mode='h' 
 "|
 "    \  call pandoc#formatting#UseHardWraps()
 
