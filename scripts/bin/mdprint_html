@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pandoc --verbose --self-contained --css ~/Templates/template.css -s -f markdown+smart --toc   ${FILE} -o ${FILE}.html
