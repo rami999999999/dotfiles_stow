@@ -13,7 +13,7 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugged')
   "deoplete for auto-completion
-  "Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/deoplete.nvim'
   Plug 'mdempsky/gocode', {'rtp': 'nvim/'}
   "Ale for Linting
   Plug 'dense-analysis/ale'
@@ -59,15 +59,18 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'cespare/vim-toml'
     "Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
     Plug 'lervag/vimtex', {'for':['latex']}
-   " Plug 'zchee/deoplete-go', {'for':['go']}
-   " Plug 'zchee/deoplete-jedi', {'for':['python']}
+    Plug 'deoplete-plugins/deoplete-go', {'do':'make','for':['go']}
+    Plug 'deoplete-plugins/deoplete-jedi', {'for':['python']}
     "Plug 'davidhalter/jedi-vim', {'for':['python']}
-    "Plug 'sebastianmarkow/deoplete-rust', {'for':['rust']}
-    "Plug 'fszymanski/deoplete-emoji'
-    "Plug 'Shougo/deoplete-clangx', {'for':['C']}
-    "Plug 'deathlyfrantic/deoplete-spell'
-    Plug 'Shougo/neosnippet.vim'
-    Plug 'Shougo/neosnippet-snippets'
+    Plug 'sebastianmarkow/deoplete-rust', {'for':['rust']}
+    Plug 'fszymanski/deoplete-emoji'
+    Plug 'zchee/deoplete-clang', {'for':['C']}
+    Plug 'deoplete-plugins/deoplete-dictionary'
+    Plug 'deoplete-plugins/deoplete-docker'
+    Plug 'deoplete-plugins/deoplete-make'
+    
+    "Plug 'Shougo/neosnippet.vim'
+    "Plug 'Shougo/neosnippet-snippets'
     Plug 'autozimu/LanguageClient-neovim', {
         \ 'branch': 'next',
         \ 'do': 'bash install.sh',
