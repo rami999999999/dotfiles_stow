@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mkdir ~/.local/share/mail/ist165464/"{$1}"/{cur,new,tmp}

@@ -1,0 +1,25 @@
+
+IMAPStore ist165464-remote
+Host mail.tecnico.ulisboa.pt
+Port  993
+User ist165464
+PassCmd "pass mutt-wizard-ist165464"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore ist165464-local
+Subfolders Verbatim
+Path ~/.local/share/mail/ist165464/
+Inbox ~/.local/share/mail/ist165464/INBOX
+Flatten .
+
+Channel ist165464
+Expunge Both
+Master :ist165464-remote:
+Slave :ist165464-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 1000
+# End profile
+

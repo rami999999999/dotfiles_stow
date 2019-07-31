@@ -1,3 +1,14 @@
+
+mailboxes =ist165464 ===================== "=INBOX" "=PATCH" "=Dev" "=Drafts" "=Sent" "=Deleted\ Messages" "=Sent\ Messages" "=Trash" "=Spam" "=Archive"  
+macro index,pager gd "<change-folder>=Dev<enter>" "go to dev" 
+macro index,pager Md "<save-message>=Dev<enter>y" "move mail to dev" 
+macro index,pager Cd "<copy-message>=Dev<enter>y" "copy mail to dev" 
+
+macro index,pager gp "<change-folder>=PATCH<enter>" "go to PATCH"
+macro index,pager Mp "<save-message>=PATCH<enter>" "go to PATCH"
+macro index,pager Cp "<copy-message>=PATCH<enter>" "go to PATCH"
+
+
 # compose View Options
 set envelope_from                    # which from?
 set edit_headers                     # show headers when composing
@@ -54,7 +65,8 @@ bind pager ] next-unread
 
 bind index - collapse-thread
 
-macro index,pager A \
-  "<save-message>=Archive<enter>"  \
-  "move message to the archive"
+## Make quick html view macro
+bind index,pager V  noop        ## Unbinds V from version
+macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 
+my_hdr Bcc: pedrolorgaramos@tecnico.ulisboa.pt
