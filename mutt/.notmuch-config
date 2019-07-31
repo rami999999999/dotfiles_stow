@@ -1,0 +1,19 @@
+[database]
+path=/home/pedramos/.local/share/mail
+
+[user]
+name=Pedro L. Ramos
+primary_email=pedrolorgaramos@tecnico.ulisboa.pt
+
+[new]
+tags=unread;inbox;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
+
+[crypto]
+gpg_path=gpg
