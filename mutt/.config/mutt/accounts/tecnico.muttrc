@@ -1,5 +1,5 @@
 
-mailboxes =ist165464 ===================== "=INBOX" "=PATCH" "=Dev" "=Drafts" "=Sent" "=Deleted\ Messages" "=Sent\ Messages" "=Trash" "=Spam" "=Archive"  
+  mailboxes =ist165464 ===================== "=INBOX" "=PATCH" "=Dev" "=Drafts" "=Sent" "=Deleted\ Messages" "=Sent\ Messages" "=Trash" "=Spam"
 macro index,pager gd "<change-folder>=Dev<enter>" "go to dev" 
 macro index,pager Md "<save-message>=Dev<enter>y" "move mail to dev" 
 macro index,pager Cd "<copy-message>=Dev<enter>y" "copy mail to dev" 

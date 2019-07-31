@@ -1,3 +1,8 @@
 #!/bin/sh
+for i in cur new tmp; do
+    mkdir -p "$HOME"/.local/share/mail/ist165464/"${1}"/"$i"
+done
 
-mkdir ~/.local/share/mail/ist165464/"{$1}"/{cur,new,tmp}
+sed -i "/mailboxes/s/.*/ &\"=$1\"/g" "$HOME"/.config/mutt/accounts/tecnico.muttrc
+
+mailsync -V ist165464
