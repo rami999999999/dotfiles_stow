@@ -128,7 +128,7 @@ let g:clang_complete_auto = 1
 " VIM options
 " ============
 
-set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/bin/fzf
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -399,4 +399,4 @@ nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
 let g:indentLine_setColors=0
 let g:indentLine_setConceal = 0
 
-
+source /usr/share/doc/fzf/examples/fzf.vim

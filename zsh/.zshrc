@@ -27,7 +27,7 @@ ZSH_THEME="garyblessington"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -119,6 +119,7 @@ export BROWSER=firefox
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="exa -F"
 alias h="history"
 alias p="pwd -P"
 alias s="sudo -s"
@@ -184,3 +185,4 @@ export PATH=$PATH:$HOME/dev/go/bin
 export TERM=xterm-256color
 
 alias 9plan="cd /usr/lib/plan9"
+source /usr/share/doc/fzf/examples/key-bindings.zsh
