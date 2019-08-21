@@ -1,10 +1,10 @@
 #!/bin/sh
 
 
-if (($# == 0)); then
+if [ $# = 0 ]; then
     nvim -u $HOME/.config/nvim/simple.vim 
 else
-    nvim -u $HOME/.config/nvim/simple.vim $@ 
+    nvim -u "$HOME/.config/nvim/simple.vim" "$@" 
 fi
 
 

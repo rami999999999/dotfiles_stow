@@ -1,4 +1,5 @@
-# If you come from bash you might have to change your $PATH.
+#
+#If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -10,7 +11,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="garyblessington"
 
 # Autojump
-. /usr/share/autojump/autojump.zsh
+#. /usr/share/autojump/autojump.zsh
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -55,7 +56,7 @@ ZSH_CUSTOM=$HOME/.zcustom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,7 +96,7 @@ zle -N self-insert url-quote-magic
 
 # Allows st to use different cursors in different vim modes (in neovim)
 #export TERM=xterm
-#export TERM=xterm-256color
+export TERM=xterm-256color
 
 # Possible fix for del key not working on st
 #function zle-line-init () { echoti smkx }

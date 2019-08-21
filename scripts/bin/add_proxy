@@ -1,6 +1,6 @@
 #!/bin/sh
 
-makdir -p /etc/profile.d
+mkdir -p /etc/profile.d
 
 cat <<EOF >>/etc/zsh/zshrc >>/etc/profile.d/nokia-proxy.sh
 export HTTPS_PROXY=http://10.144.1.10:8080

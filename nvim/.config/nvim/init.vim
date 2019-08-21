@@ -30,6 +30,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Plug 'itchyny/lightline.vim'
     Plug 'scrooloose/nerdtree'
     "Plug 'altercation/vim-colors-solarized'
+    Plug 'lifepillar/vim-solarized8'
     "Plug 'morhetz/gruvbox' 
     "Plug 'drewtempelmeyer/palenight.vim'
     " Nice icons
@@ -64,10 +65,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Plug 'davidhalter/jedi-vim', {'for':['python']}
     Plug 'sebastianmarkow/deoplete-rust', {'for':['rust']}
     Plug 'fszymanski/deoplete-emoji'
-    Plug 'zchee/deoplete-clang', {'for':['C']}
+    Plug 'tweekmonster/deoplete-clang2', {'for':['C']}
     Plug 'deoplete-plugins/deoplete-dictionary'
     Plug 'deoplete-plugins/deoplete-docker'
-    Plug 'deoplete-plugins/deoplete-make'
     
     "Plug 'Shougo/neosnippet.vim'
     "Plug 'Shougo/neosnippet-snippets'
@@ -243,7 +243,7 @@ set t_Co=256
 "colorscheme solarized
 "colorscheme  zenburn
 "colorscheme gruvbox
-set background=dark
+set background=light
 set termguicolors
 let g:nord_italic=1
 let g:nord_underline = 1
@@ -256,8 +256,8 @@ let g:spring_night_high_contrast=0
 let g:spring_night_highlight_terminal=1
 
 "colorscheme nord
-colorscheme spring-night
-let g:airline_theme = 'spring_night'
+colorscheme solarized8 
+let g:airline_theme = 'solarized'
 set guicursor=
 "let g:airline_theme='nord'
 
