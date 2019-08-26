@@ -31,7 +31,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'scrooloose/nerdtree'
     "Plug 'altercation/vim-colors-solarized'
     Plug 'lifepillar/vim-solarized8'
-    "Plug 'morhetz/gruvbox' 
+    Plug 'morhetz/gruvbox' 
     "Plug 'drewtempelmeyer/palenight.vim'
     " Nice icons
     Plug 'ryanoasis/vim-devicons'    
@@ -243,7 +243,7 @@ set t_Co=256
 "colorscheme solarized
 "colorscheme  zenburn
 "colorscheme gruvbox
-set background=light
+set background=dark
 set termguicolors
 let g:nord_italic=1
 let g:nord_underline = 1
@@ -256,8 +256,9 @@ let g:spring_night_high_contrast=0
 let g:spring_night_highlight_terminal=1
 
 "colorscheme nord
-colorscheme solarized8 
-let g:airline_theme = 'solarized'
+"colorscheme solarized8 
+colorscheme gruvbox 
+let g:airline_theme = 'gruvbox'
 set guicursor=
 "let g:airline_theme='nord'
 

@@ -187,3 +187,11 @@ export TERM=xterm-256color
 
 alias 9plan="cd /usr/lib/plan9"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+export ONEDRIVE="/mnt/c/Users/pedramos/OneDrive - Nokia"
+export CDRIVE="/mnt/c/Users/pedramos"
+export ONGOING="/mnt/c/Users/pedramos/OneDrive - Nokia/ongoing_stuff"
+export CODE="/mnt/c/Users/pedramos/OneDrive - Nokia/code"
+export NOTES="/mnt/c/Users/pedramos/OneDrive - Nokia/notes"
+
+zstyle ':completion:*' list-colors 
