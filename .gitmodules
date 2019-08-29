@@ -10,3 +10,6 @@
 [submodule "zsh/.zcustom/.zcustom/themes/powerlevel10k"]
 	path = zsh/.zcustom/.zcustom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh/.config/zsh/oh-my-zsh"]
+	path = zsh/.config/zsh/oh-my-zsh
+	url = http://github.com/robbyrussell/oh-my-zsh

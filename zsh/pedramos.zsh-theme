@@ -1,0 +1,16 @@
+# Comment
+
+PROMPT="%{%B%F{166}%B%}[%c] %F{15}"
+
+RPROMPT='%{$fg[magenta]%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
+
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_DIRTY=""
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_ADDED="%{%F{167}%} ✈"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{%F{214}%} ✭"
+ZSH_THEME_GIT_PROMPT_DELETED="%{%F{124}%} ✗"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{%F{66}%} ➦"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ✂"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{%F{245}%} ✱"
