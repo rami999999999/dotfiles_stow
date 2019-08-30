@@ -189,3 +189,4 @@ export PATH=$PATH:$HOME/dev/go/bin
 export TERM=xterm-256color
 
 alias 9plan="cd /usr/lib/plan9"
+export FZF_BASE="/usr/bin/fzf"
