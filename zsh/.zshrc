@@ -15,7 +15,7 @@ ZSH_THEME="pedramos"
 
 
 # Autojump
-. /usr/share/autojump/autojump.zsh
+#. /usr/share/autojump/autojump.zsh
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -163,8 +163,8 @@ alias subl="subl3"
 #alias nvidia="sudo prime-select nvidia"
 #alias intel="sudo prime-select intel"
 ## cpu governor
-#alias gameoff="sudo cpufreq-set -g powersave"
-#alias gameon="sudo cpufreq-set -g performance"
+alias gameoff="sudo cpufreq-set -g powersave"
+alias gameon="sudo cpufreq-set -g performance"
 #
 ## translate-shell: brief
 #alias t='trans -brief'
@@ -183,6 +183,7 @@ bindkey "^[[1;5C" forward-word
 #bindkey "^?" backward-kill-word
 
 
+export ZSH_DISABLE_COMPFIX=true
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:$HOME/dev/go/bin
 
@@ -190,3 +191,4 @@ export TERM=xterm-256color
 
 alias 9plan="cd /usr/lib/plan9"
 export FZF_BASE="/usr/bin/fzf"
+export ZSH_DISABLE_COMPFIX=true
