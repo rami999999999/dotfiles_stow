@@ -192,3 +192,5 @@ export TERM=xterm-256color
 alias 9plan="cd /usr/lib/plan9"
 export FZF_BASE="/usr/bin/fzf"
 export ZSH_DISABLE_COMPFIX=true
+
+alias ls="ls -F --color"
