@@ -64,7 +64,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Plug 'davidhalter/jedi-vim', {'for':['python']}
     Plug 'sebastianmarkow/deoplete-rust', {'for':['rust']}
     Plug 'fszymanski/deoplete-emoji'
-    Plug 'zchee/deoplete-clang', {'for':['C']}
+    Plug 'tweekmonster/deoplete-clang2', {'for':['C']}
     Plug 'deoplete-plugins/deoplete-dictionary'
     Plug 'deoplete-plugins/deoplete-docker'
     Plug 'deoplete-plugins/deoplete-make'
@@ -110,7 +110,7 @@ let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['f
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['black'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_c_clangformat_options="-style Mozilla"
+let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8}"'
 
 let g:ale_python_black_options ="-l 79"
 
@@ -199,11 +199,22 @@ endif
 " C stuff
 " =============
 au BufNewFile,BufRead *.c
-	\ set tabstop=2 |
-	\ set softtabstop=2 |
-	\ set shiftwidth=2 |
+	\ set tabstop=8 |
+	\ set softtabstop=8 |
+	\ set shiftwidth=8 |
 	\ set textwidth=79 |
-	\ set expandtab |
+	\ set noexpandtab |
+	\ set autoindent |
+	\ set fileformat=unix
+
+" scdoc stuff
+" =============
+au BufNewFile,BufRead *.scd
+	\ set tabstop=4 |
+	\ set softtabstop=2 |
+	\ set shiftwidth=4 |
+	\ set textwidth=79 |
+	\ set noexpandtab |
 	\ set autoindent |
 	\ set fileformat=unix
 

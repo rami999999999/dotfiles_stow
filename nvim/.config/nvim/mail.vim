@@ -8,7 +8,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     
     Plug 'junegunn/goyo.vim'
     Plug 'rhysd/vim-color-spring-night'
-    
+    Plug 'morhetz/gruvbox' 
+
 call plug#end()
 
 
@@ -39,7 +40,7 @@ set t_Co=256
 "color desert
 "colorscheme solarized
 "colorscheme  zenburn
-colorscheme spring-night
+colorscheme gruvbox
 set background=dark
 set termguicolors
 
