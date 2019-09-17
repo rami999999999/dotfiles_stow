@@ -30,7 +30,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Plug 'itchyny/lightline.vim'
     Plug 'scrooloose/nerdtree'
     "Plug 'altercation/vim-colors-solarized'
-    Plug 'lifepillar/vim-solarized8'
     Plug 'morhetz/gruvbox' 
     "Plug 'drewtempelmeyer/palenight.vim'
     " Nice icons
@@ -68,6 +67,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tweekmonster/deoplete-clang2', {'for':['C']}
     Plug 'deoplete-plugins/deoplete-dictionary'
     Plug 'deoplete-plugins/deoplete-docker'
+    Plug 'deoplete-plugins/deoplete-make'
     
     "Plug 'Shougo/neosnippet.vim'
     "Plug 'Shougo/neosnippet-snippets'
@@ -110,7 +110,7 @@ let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['f
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['black'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_c_clangformat_options="-style Mozilla"
+let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8}"'
 
 let g:ale_python_black_options ="-l 79"
 
@@ -128,7 +128,7 @@ let g:clang_complete_auto = 1
 " VIM options
 " ============
 
-set rtp+=/usr/bin/fzf
+set rtp+=/usr/local/opt/fzf
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -199,11 +199,22 @@ endif
 " C stuff
 " =============
 au BufNewFile,BufRead *.c
-	\ set tabstop=2 |
-	\ set softtabstop=2 |
-	\ set shiftwidth=2 |
+	\ set tabstop=8 |
+	\ set softtabstop=8 |
+	\ set shiftwidth=8 |
 	\ set textwidth=79 |
-	\ set expandtab |
+	\ set noexpandtab |
+	\ set autoindent |
+	\ set fileformat=unix
+
+" scdoc stuff
+" =============
+au BufNewFile,BufRead *.scd
+	\ set tabstop=4 |
+	\ set softtabstop=2 |
+	\ set shiftwidth=4 |
+	\ set textwidth=79 |
+	\ set noexpandtab |
 	\ set autoindent |
 	\ set fileformat=unix
 
@@ -242,7 +253,7 @@ set t_Co=256
 "color desert
 "colorscheme solarized
 "colorscheme  zenburn
-"colorscheme gruvbox
+colorscheme gruvbox
 set background=dark
 set termguicolors
 let g:nord_italic=1
@@ -256,8 +267,8 @@ let g:spring_night_high_contrast=0
 let g:spring_night_highlight_terminal=1
 
 "colorscheme nord
-"colorscheme solarized8 
-colorscheme gruvbox 
+"colorscheme spring-night
+"let g:airline_theme = 'spring_night'
 let g:airline_theme = 'gruvbox'
 set guicursor=
 "let g:airline_theme='nord'
@@ -400,4 +411,4 @@ nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
 let g:indentLine_setColors=0
 let g:indentLine_setConceal = 0
 
-source /usr/share/doc/fzf/examples/fzf.vim
+
