@@ -110,7 +110,7 @@ let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['f
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['black'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8}"'
+let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8,PointerBindsToType: false}"'
 
 let g:ale_python_black_options ="-l 79"
 
@@ -225,11 +225,10 @@ au BufNewFile,BufRead *.sh,*.ksh
     \ set noexpandtab |
     \ set autoindent |
     \ set fileformat=unix
+	\ set noexpandtab 
 
 " Markdown stuff
 " =================
-
-
 au BufNewFile,BufRead *.md,*.rmd
     \ set nofoldenable |
     \ set expandtab |
