@@ -110,7 +110,7 @@ let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['f
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['black'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8,PointerBindsToType: false}"'
+let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8,PointerBindsToType: false, UseTab: UT_ForIdentation}"'
 
 let g:ale_python_black_options ="-l 79"
 
@@ -151,7 +151,7 @@ set hidden
 set clipboard+=unnamedplus
 set autoindent
 set ts=4
-set expandtab
+"set expandtab
 set shiftwidth=4
 set sts=4
 set smarttab
@@ -216,6 +216,7 @@ au BufNewFile,BufRead *.scd
 	\ set textwidth=79 |
 	\ set noexpandtab |
 	\ set autoindent |
+    \ set formatoptions+=t |
 	\ set fileformat=unix
 
 " sh stuff
