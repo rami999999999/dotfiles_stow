@@ -100,17 +100,16 @@ let g:move_key_modifier = 'N'
 "let g:ale_lint_on_save = 1
 "let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
 let g:ale_type_map = {'perlcritic': {'ES': 'WS', 'E': 'W'}}
-" let g:ale_sign_column_always = 1                " ale enabled
 "let g:ale_sign_column_always = 1
 let g:ale_completion_enabled=1
 let g:ale_fix_on_save = 1
 
-let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['gofmt'],'rust':['rls'],'sh':['shellcheck']}
+let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['golangci-lint'],'rust':['rls'],'sh':['shellcheck']}
 
 let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['black'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_c_clangformat_options='-style="{BasedOnStyle: Mozilla, IndentWidth: 8}"'
+let g:ale_c_clangformat_options='-style="{BasedOnStyle: LLVM, IndentWidth: 8,PointerBindsToType: false, UseTab: Always, BreakBeforeBraces: Linux,AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, AlwaysBreakAfterReturnType: RTBS_All}"'
 
 let g:ale_python_black_options ="-l 79"
 
@@ -151,7 +150,7 @@ set hidden
 set clipboard+=unnamedplus
 set autoindent
 set ts=4
-set expandtab
+"set expandtab
 set shiftwidth=4
 set sts=4
 set smarttab
@@ -216,6 +215,7 @@ au BufNewFile,BufRead *.scd
 	\ set textwidth=79 |
 	\ set noexpandtab |
 	\ set autoindent |
+    \ set formatoptions+=t |
 	\ set fileformat=unix
 
 " sh stuff
@@ -225,11 +225,10 @@ au BufNewFile,BufRead *.sh,*.ksh
     \ set noexpandtab |
     \ set autoindent |
     \ set fileformat=unix
+	\ set noexpandtab 
 
 " Markdown stuff
 " =================
-
-
 au BufNewFile,BufRead *.md,*.rmd
     \ set nofoldenable |
     \ set expandtab |
