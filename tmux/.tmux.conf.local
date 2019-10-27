@@ -301,3 +301,4 @@ set -g mouse on
 #
 #
 
+unbind C-d

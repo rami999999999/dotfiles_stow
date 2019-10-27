@@ -1,15 +1,19 @@
 # Comment
 
 
+#RPROMPT='%F{214}$(git_prompt_info)%f $(git_prompt_status)%f'
 
 
-PROMPT='%F{166}%B[%c] %b%f'
-
-RPROMPT='%F{214}$(git_prompt_info)%f $(git_prompt_status)%f'
+PROMPT='%F{166}%B[%c]$%b%f '
 
 if [[ $(whoami) == "root" ]]; then
 PROMPT='%F{124}%B[%c] %b%f'
 fi
+
+if [ -n SSH_CONNECTION ]; then
+PROMPT='%F{166}%B@%m [%c]$%b%f '
+fi
+
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
