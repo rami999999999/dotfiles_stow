@@ -5,409 +5,198 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 
-let g:ale_completion_enabled=1
-    
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+
+set nocompatible
+filetype off
 
 call plug#begin('~/.local/share/nvim/plugged')
-  "deoplete for auto-completion
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'mdempsky/gocode', {'rtp': 'nvim/'}
-  "Ale for Linting
-  Plug 'dense-analysis/ale'
-  Plug 'junegunn/fzf.vim'
-  "Plug 'tbastos/vim-lua'
-  "Plug 'neovim/nvimdev.nvim'
-    
-  Plug 'Shougo/deol.nvim', { 'rev': 'a1b5108fd' }
-  Plug 'itchyny/vim-gitbranch'  
-  ""theming
-    Plug 'rhysd/vim-color-spring-night'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    "Plug 'itchyny/lightline.vim'
-    Plug 'scrooloose/nerdtree'
-    "Plug 'altercation/vim-colors-solarized'
-    Plug 'morhetz/gruvbox' 
-    "Plug 'drewtempelmeyer/palenight.vim'
-    " Nice icons
-    Plug 'ryanoasis/vim-devicons'    
-    
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    " Identation guides for better visualization
-    Plug 'Yggdroot/indentLine'
 
-    Plug 'majutsushi/tagbar'
+" Bundles
+" Actual plugins
+Plug 'ap/vim-buftabline'
+Plug 'VundleVim/Vundle.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'gerw/vim-HiLinkTrace'
+" Meta plugins
+Plug 'vim-scripts/ingo-library'
+Plug 'vim-scripts/SyntaxRange'
+" Syntax highlighting
+Plug 'plasticboy/vim-markdown'
+Plug 'cespare/vim-toml'
+Plug 'rust-lang/rust.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'google/vim-jsonnet'
+Plug 'sirtaj/vim-openscad'
+Plug 'leafgarland/typescript-vim'
+Plug 'beyondmarc/glsl.vim'
+Plug 'vim-scripts/scons.vim'
+Plug 'calviken/vim-gdscript3'
+Plug 'wannesm/wmgraphviz.vim'
+Plug 'sotte/presenting.vim'
+Plug 'ziglang/zig.vim'
 
-    Plug 'lepture/vim-jinja'
-    Plug 'rust-lang/rust.vim', {'for':'rust'}
-    "Plug 'fatih/vim-go'
-    "Plug 'vim-perl/vim-perl'
-    "utils
-    Plug 'pbrisbin/vim-mkdir'
-    
-    Plug 'junegunn/goyo.vim', {'on':'GoyoEnter'}
-    Plug 'junegunn/limelight.vim', {'on':'GoyoEnter'}
-    Plug 'vim-pandoc/vim-pandoc'
-    Plug 'vim-pandoc/vim-pandoc-syntax'
-    Plug 'vim-pandoc/vim-rmarkdown'
-    Plug 'godlygeek/tabular'
-    Plug 'reedes/vim-pencil'
-   
-    Plug 'cespare/vim-toml'
-    "Plug 'arcticicestudio/nord-vim',{'branch':'develop'}
-    Plug 'lervag/vimtex', {'for':['latex']}
-    Plug 'deoplete-plugins/deoplete-go', {'do':'make','for':['go']}
-    Plug 'deoplete-plugins/deoplete-jedi', {'for':['python']}
-    "Plug 'davidhalter/jedi-vim', {'for':['python']}
-    Plug 'sebastianmarkow/deoplete-rust', {'for':['rust']}
-    Plug 'fszymanski/deoplete-emoji'
-    Plug 'tweekmonster/deoplete-clang2', {'for':['C']}
-    Plug 'deoplete-plugins/deoplete-dictionary'
-    Plug 'deoplete-plugins/deoplete-docker'
-    Plug 'deoplete-plugins/deoplete-make'
-    
-    "Plug 'Shougo/neosnippet.vim'
-    "Plug 'Shougo/neosnippet-snippets'
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ } 
+" Added by PLR
+
+
+" /Bundles
+
 call plug#end()
 
-let g:LanguageClient_autoStart = 1
+filetype plugin indent on
 
-"let g:LanguageClient_serverCommands = {
-"    \ 'sh': ['bash-language-server', 'start']
-"    \ }
+set laststatus=2
+set t_Co=256
 
-" ALLE Config
-" ================
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_frontmatter=1
+let g:jsx_ext_required = 0
 
-let g:ale_enabled = 1
-let g:ale_sign_error = '✖︎'
-highlight ALEErrorSign guifg=red ctermfg=red
-let g:ale_sign_warning = '✔︎'
-highlight ALEWarningSign guifg=grey ctermfg=grey
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:move_key_modifier = 'N'
-"let g:ale_lint_on_insert_leave = 1
-"let g:ale_lint_on_enter = 1
-"let g:ale_lint_on_save = 1
-"let g:ale_perl_perl_options = '-c -Mwarnings -Ilib'
-let g:ale_type_map = {'perlcritic': {'ES': 'WS', 'E': 'W'}}
-"let g:ale_sign_column_always = 1
-let g:ale_completion_enabled=1
-let g:ale_fix_on_save = 1
+set encoding=utf-8
+set fileformat=unix
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set magic " unbreak vim's regex implementation
 
-let g:ale_linters = {'c':['clang','clang-tidy'],'perl':['perltidy'],'python':['flake8'],'go':['golangci-lint'],'rust':['rls'],'sh':['shellcheck']}
-
-let g:ale_fixers = {'perl':['perltidy'],'c':['clang-format'],'python':['black'],'go':['gofmt'],'rust':['rustfmt'],'sh':['shfmt']}
-
-let g:airline#extensions#ale#enabled = 1
-let g:ale_c_clangformat_options='-style="{BasedOnStyle: LLVM, IndentWidth: 8,PointerBindsToType: false, UseTab: Always, BreakBeforeBraces: Linux,AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, AlwaysBreakAfterReturnType: RTBS_All}"'
-
-let g:ale_python_black_options ="-l 79"
-
-nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
-nmap <silent> <C-Down> <Plug>(ale_next_wrap)
-
-
-" Deoplete
-" ==========
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang/'
-let g:clang_complete_auto = 1
-
-
-" VIM options
-" ============
-
-set rtp+=/usr/local/opt/fzf
-
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+let mapleader=","
+set clipboard+=unnamedplus
+set showbreak=↪\
 
 set number
-set breakindent
-set breakindentopt=shift:1
-set showbreak=↪\
-set linebreak
-set colorcolumn=79
-set formatoptions+=t
+set scrolloff=3
+set sidescroll=3
 
+set ruler
+set cc=80
+set nowrap
+
+set ignorecase
+set smartcase
+
+set splitbelow
+set hidden
+set notimeout
+
+" Search as you type, highlight results
+set incsearch
+set showmatch
+set hlsearch
+
+" Resize windows and move tabs and such with the mouse
 set mouse=a
 
-" hide buffers instead of closing them
-" Allows to change buffers with unsaved changes
-set hidden
+" Don't litter swp files everywhere
+set backupdir=~/.cache
+set directory=~/.cache
 
-set clipboard+=unnamedplus
-set autoindent
-set ts=4
-"set expandtab
-set shiftwidth=4
-set sts=4
-set smarttab
-set showmatch
+set nofoldenable
+set lazyredraw
 
-set cursorline
+set tags=./tags;
 
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+set printheader=\
 
+syntax on
+nnoremap \\ :noh<cr> " Clear higlighting
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " Trim trailing spaces
+nnoremap Y y$
+nnoremap cc :center<cr>
+inoremap <C-c> <ESC>
+" Ex mode is fucking dumb
+nnoremap Q <Nop>
 
-let mapleader=","       " leader is comma
+command Jp e ++enc=euc-jp
 
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+" Preferences for various file formats
+autocmd FileType c setlocal noet ts=4 sw=4 tw=80
+autocmd FileType h setlocal noet ts=4 sw=4 tw=80
+autocmd FileType cpp setlocal noet ts=4 sw=4 tw=80
+autocmd FileType s setlocal noet ts=4 sw=4
+autocmd FileType go setlocal noet ts=4 sw=4
+autocmd FileType hy setlocal filetype=lisp
+autocmd FileType sh setlocal noet ts=4 sw=4
+autocmd BufRead,BufNewFile *.js setlocal et ts=2 sw=2
+autocmd FileType html setlocal et ts=2 sw=2
+autocmd FileType htmldjango setlocal et ts=2 sw=2
+autocmd FileType ruby setlocal et ts=2 sw=2
+autocmd FileType scss setlocal et ts=2 sw=2
+autocmd FileType yaml setlocal et ts=2 sw=2
+autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
+autocmd FileType rmd setlocal tw=80 et ts=2 sw=2
+autocmd FileType text setlocal tw=80
+autocmd FileType meson setlocal noet ts=2 sw=2
+autocmd FileType bzl setlocal et ts=2 sw=2
+autocmd FileType typescript setlocal et ts=2 sw=2
+autocmd FileType python setlocal et ts=4 sw=4
+autocmd BufNewFile,BufRead *.ms set syntax=python ts=4 sw=4 noet
+autocmd BufNewFile,BufRead *.scd set ts=4 sw=4 noet
+autocmd FileType tex hi Error ctermbg=NONE
+autocmd FileType mail setlocal noautoindent
+augroup filetypedetect
+  autocmd BufRead,BufNewFile *mutt-*              setfiletype mail
+augroup filetypedetect
+  autocmd BufRead,BufNewFile *qutebrowser-editor-* set ts=4 sw=4 et
+autocmd BufNewFile,BufRead * if expand('%:t') == 'APKBUILD' | set ft=sh | endif
+autocmd BufNewFile,BufRead * if expand('%:t') == 'PKGBUILD' | set ft=sh | endif
 
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=e
 
-" Latex stuff
-" ============
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-let g:tex_conceal='abdmg'
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,space:.
 
+syntax enable
+colorscheme ron
+highlight Search ctermbg=12
+highlight NonText ctermfg=darkgrey
+highlight SpecialKey ctermfg=darkgrey
+highlight clear SignColumn
+highlight Comment cterm=bold ctermfg=none
+highlight StatusLine cterm=none ctermbg=none ctermfg=darkgrey
+highlight StatusLineNC cterm=none ctermbg=none ctermfg=darkgrey
+highlight Title cterm=none ctermfg=darkgrey
+highlight TabLineFill cterm=none
+highlight TabLine cterm=none ctermfg=darkgrey ctermbg=none
+highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
+highlight jsParensError ctermbg=NONE
+highlight Todo ctermbg=NONE ctermfg=red cterm=bold
+highlight PreProc ctermfg=grey
+highlight String ctermfg=darkblue cterm=italic
+highlight lineNr ctermfg=grey cterm=italic
+highlight cIncluded ctermfg=NONE cterm=bold
+highlight pythonInclude ctermfg=blue
+highlight pythonConditional ctermfg=darkcyan
+highlight pythonBuiltin ctermfg=darkcyan
+highlight Pmenu ctermbg=white ctermfg=black
+highlight PmenuSel ctermbg=darkcyan ctermfg=black
 
+" Transparent editing of gpg encrypted files.
+" By Wouter Hanegraaff
+augroup encrypted
+  au!
+  autocmd BufReadPre,FileReadPre *.gpg set viminfo=
+  autocmd BufReadPre,FileReadPre *.gpg set noswapfile noundofile nobackup
+  autocmd BufReadPre,FileReadPre *.gpg set bin
+  autocmd BufReadPre,FileReadPre *.gpg let ch_save = &ch|set ch=2
+  autocmd BufReadPost,FileReadPost *.gpg '[,']!gpg --decrypt 2> /dev/null
+  autocmd BufReadPost,FileReadPost *.gpg set nobin
+  autocmd BufReadPost,FileReadPost *.gpg let &ch = ch_save|unlet ch_save
+  autocmd BufReadPost,FileReadPost *.gpg execute ":doautocmd BufReadPost " . expand("%:r")
+  autocmd BufWritePre,FileWritePre *.gpg '[,']!gpg --default-recipient-self -ae 2>/dev/null
+  autocmd BufWritePost,FileWritePost *.gpg u
+augroup END
 
-" Python stuff
-" =================
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
+let g:presenting_top_margin = 2
 
-"python template
-if has("autocmd")
-  augroup templates
-    autocmd BufNewFile *.py 0r ~/.config/nvim/templates/py_template.py
-  augroup END
-endif
-
-" C stuff
-" =============
-au BufNewFile,BufRead *.c
-	\ set tabstop=8 |
-	\ set softtabstop=8 |
-	\ set shiftwidth=8 |
-	\ set textwidth=79 |
-	\ set noexpandtab |
-	\ set autoindent |
-	\ set fileformat=unix
-
-" scdoc stuff
-" =============
-au BufNewFile,BufRead *.scd
-	\ set tabstop=4 |
-	\ set softtabstop=2 |
-	\ set shiftwidth=4 |
-	\ set textwidth=79 |
-	\ set noexpandtab |
-	\ set autoindent |
-    \ set formatoptions+=t |
-	\ set fileformat=unix
-
-" sh stuff
-" ============
-au BufNewFile,BufRead *.sh,*.ksh
-    \ set textwidth=79 |
-    \ set noexpandtab |
-    \ set autoindent |
-    \ set fileformat=unix
-	\ set noexpandtab 
-
-" Markdown stuff
-" =================
-au BufNewFile,BufRead *.md,*.rmd
-    \ set nofoldenable |
-    \ set expandtab |
-    \ set textwidth=79 |
-    \ set fileformat=unix |
-    \ set autoindent |
-    \ set formatoptions+=t |
-    \ let g:pandoc#after#modules#enabled = ["neosnippet","deoplete"] |
-    \ let g:pandoc#formatting#textwidth = 79 |
-    \ let g:pandoc#formatting#mode='h' 
-"|
-"    \  call pandoc#formatting#UseHardWraps()
-
-set concealcursor="nc"
-
-
-
-" Colors
-" =========
-set t_Co=256
-"color desert
-"colorscheme solarized
-"colorscheme  zenburn
-colorscheme gruvbox
-set background=dark
-set termguicolors
-let g:nord_italic=1
-let g:nord_underline = 1
-let g:nord_italic_comments = 1
-let g:nord_comment_brightness = 20
-let g:nord_uniform_diff_background = 1
-let g:nord_cursor_line_number_background = 1
-
-let g:spring_night_high_contrast=0
-let g:spring_night_highlight_terminal=1
-
-"colorscheme nord
-"colorscheme spring-night
-"let g:airline_theme = 'spring_night'
-let g:airline_theme = 'gruvbox'
-set guicursor=
-"let g:airline_theme='nord'
-
-
-"airline config
-"=================
-"let g:airline_theme='solarized'
-"let g:airline_theme='zenburn'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
-let g:airline_detect_whitespace=0
-let g:airline_section_warning=' '
-let g:airline_highlighting_cache = 1
-let g:airline_powerline_fonts = 1
-
-"   lighlime config
-"   ===============
-
-"let g:lightline = {
-"      \ 'colorscheme': 'one',
-"      \ 'active': {
-"      \   'left': [ [ 'mode', 'paste' ],
-"      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-"      \ },
-"      \ 'component_function': {
-"      \   'gitbranch': 'fugitive#head'
-"      \ },
-"      \ }
-
-
-set ttimeoutlen=10
-set noshowmode
-
-
-"nerdtree
-"============
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-let g:go_version_warning = 0
-
-nmap <F8> :TagbarToggle<CR>
-
-
-" buffers management
-" ====================
+" buffer management
 nnoremap <tab> :bn<CR>
 nnoremap <s-tab> :bp<CR>
 nnoremap <leader>bd :bd<CR>
-
-" Other config
-" =============
-
-let deoplete#enable_at_startup=1
-
-let g:tagbar_ctags_bin = '/usr/bin/uctags'
-
-let g:jedi#completions_enabled = 0
-
-let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
-
-let g:ale_perl_perlcritic_showrules = 1
-
-
-" Goyo config
-" ============
-
-function! s:goyo_enter()
-  let b:quitting = 0
-  let b:quitting_bang = 0
-  autocmd QuitPre <buffer> let b:quitting = 1
-  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
-  Limelight
-  
-endfunction
-
-function! s:goyo_leave()
-  " Quit Vim if this is the only remaining buffer
-  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    if b:quitting_bang
-      qa!
-    else
-      qa
-    endif
-  endif
-Limelight!
-endfunction
-
-autocmd! User GoyoEnter call <SID>goyo_enter()
-autocmd! User GoyoLeave call <SID>goyo_leave()
-
-" buffers
-"============
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-" FZF
-" =============
-
-map <F2> :ls<CR>:b<Space>
-
-nnoremap <silent> <Leader><Enter> :Buffer <CR>
-nnoremap <silent> <Leader>n :Files<CR>
-nnoremap <silent> <Leader>l :BLines<CR>
-nnoremap <silent> <Leader>L :Lines<CR>
-nnoremap <silent> <Leader>m :Marks<CR>
-
-
-nnoremap <silent> <Leader>p :! pandoc % -o %.pdf && pkill -HUP mupdf<CR>
-
-"packages needed for vim
-" autopep8
-" gofmt
-" fzf
-" clang
-
-
-
-
-"let g:netrw_banner=0
-"let g:netrw_winsize=20
-"let g:netrw_liststyle=3
-"let g:netrw_localrmdir='rm -r'
-"
-""toggle netrw on the left side of the editor
-"nnoremap <C-n> :Lexplore<CR>
-
-"hi! Conceal guifg=lightblue ctermfg=lightblue
-let g:indentLine_setColors=0
-let g:indentLine_setConceal = 0
-
-
